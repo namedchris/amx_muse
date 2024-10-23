@@ -2,6 +2,7 @@
 
 from mojo import context
 import driver
+import extron_driver
 
 
 rooms = []
@@ -58,24 +59,18 @@ def load_devices():
         split_id = device_id.split("-")
         room_name = "-".join(split_id[:2])
         rooms.append(room_name)
-        # select proper driver based on device_id
+        # select driver based on device_id
         if "keypad" in device_id:
             uis[room_name] = (
                 device_id,
                 muse_device,
             )  # extracting the device name from the device object later is trificult
         elif "touchpad" in device_id:
-            uis[room_name] = (device_id, muse_device)  # so I stash it in a tuple here
+            uis[room_name] = (device_id, muse_device)  # so I stash it in a tuple
         elif "monitor" in device_id:
-            displays[room_name] = (
-                device_id,
-                driver.lg_driver(muse_device),
-            )  # monitors use a python driver, so I add it to the tuple
+            displays[room_name] = (device_id, driver.lg_driver(muse_device))
         elif "projector" in device_id:
-            displays[room_name] = (
-                device_id,
-                driver.epson_driver(muse_device),
-            )  # projectors use a duet driver, so they don't need a python driver
+            displays[room_name] = (device_id, driver.epson_driver(muse_device))
         elif "switcher" in device_id:
             switchers[room_name] = (device_id, driver.extron_driver(muse_device))
 
@@ -87,17 +82,43 @@ def setup_rooms():
         power_on_functions[room],
         power_off_functions[room],
         pic_mute_toggle_functions[room] = get_display_functions(displays[room])
+        switcher = switchers[room]
+
         # setup button watchers for room
         if "touchpad" in uis[room[0]]:
             buttons = {
                 # muse listeners must accept an event argument. event.value tells you if the you are handling a press or release
                 # executes function on push, executes noop on release
+                # a funtion with no return is None, so I think this works
                 "port/1/button/9": lambda event: (
                     power_toggle_functions[room] if event.value else None
-                ),  # a funtion with no return is None, so I think thie works
+                ),
+                # if muse needs a callable 'lambda: None' shoule work as a noop
                 "port/1/button/210": lambda event: (
                     pic_mute_toggle_functions[room] if event.value else lambda: None
-                ),  # if muse needs a callable lambda: None shoule work as a noop
+                ),
+                "port/1/button/24": lambda event: (
+                    switcher.start_volume_ramp_up
+                    if event.value
+                    else switcher.stop_volume_ramp_up
+                ),
+                "port/1/button/25": lambda event: (
+                    switcher.start_volume_ramp_down
+                    if event.value
+                    else switcher.stop_volume_ramp_down
+                ),
+                "port/1/button/26": lambda event: (
+                    switcher.toggle_vol_mute if event.value else None
+                ),
+                "port/1/button/31": lambda event: (
+                    switcher.select_source_three if event.value else None
+                ),
+                "port/1/button/32": lambda event: (
+                    switcher.select_source_four if event.value else None
+                ),
+                "port/1/button/33": lambda event: (
+                    switcher.select_source_six if event.value else None
+                ),
             }
         """
         elif 'keypad' in uis[room[0]]:
