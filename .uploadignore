@@ -2,3 +2,6 @@
 mojo.d.ts
 jsconfig.json
 mojo
+.*
+mojo.d.ts
+jsconfig.json

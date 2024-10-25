@@ -1,6 +1,5 @@
 from mojo import context
 import driver
-import extron_driver
 
 
 rooms = []
@@ -9,139 +8,153 @@ uis = {}
 displays = {}
 switchers = {}
 
-power_toggle_functions = {}
-power_on_functions = {}
-power_off_functions = {}
-pic_mute_toggle_functions = {}
 
-
-# if different kinds of displays have different functions, the logic for that goes in this function
-# but it seems simplest to abstract drivers behind a Python class
-def get_display_functions(display):
-    power_toggle = display[1].toggle_power
-    power_on = display[1].power_on
-    power_off = display[1].power_off
-    toggle_pic_mute = display[1].toggle_pic_mute
-    return (power_toggle, power_on, power_off, toggle_pic_mute)
-
-
-def display_listener(event, room):
-    ui = uis[room]
-    try:
-        data = str(event.arguments["data"].decode())
-    except UnicodeDecodeError as err:
-        context.log.error(f"{err=}")
-        raise
-    items = data.split("\x0D")
-    if "touchpad" in ui[0]:
-        # get this rooms display buttons
-        power_button = uis[room].port[1].channel[9]
-        pic_mute_button = uis[room].port[1].channel[210]
+# create a listener for display feedback
+def get_display_listener(ui, display):
+    def listener(event):
+        nonlocal ui, display
+        power_button = ui.port[1].channel[9]
+        pic_mute_button = ui.port[1].channel[210]
+        try:
+            data = str(event.arguments["data"].decode())
+        except UnicodeDecodeError as err:
+            context.log.error(f"{err=}")
         # update driver state
-        for item in items:
-            displays[room].update_state(item)
-        # update button state
-        power_button.value = displays[room].power_is_on
-        pic_mute_button.value = displays[room].pic_mute_is_on
-    elif "keypad" in ui[0]:
-        # TODO implement keypad support
-        pass
+        display.update_state(data)
+        if "touchpad" in ui[0]:
+            # update button state
+            power_button.value = display.power_is_on
+            pic_mute_button.value = display.pic_mute_is_on
+        elif "keypad" in ui[0]:
+            # TODO implement keypad support
+            pass
+
+    return listener
 
 
-def load_devices():
-    device_ids = context.devices.ids()
+# create a listener for switchers
+def get_switcher_listener(ui, switcher):
+    def listener(event):
+        nonlocal ui, switcher
+        try:
+            data = str(event.arguments["data"].decode())
+        except UnicodeDecodeError as err:
+            context.log.error(f"{err=}")
+        print(data)
+        switcher.update_state(data)
+        if "touchpad" in ui[0]:
+            ui.port[1].channel[31] = switcher.input_three_is_active
+            ui.port[1].channel[32] = switcher.input_four_is_active
+            ui.port[1].channel[33] = switcher.input_six_is_active
+            ui.port[1].channel[26] = switcher.vol_mute_is_active
+            ui.port[1].level[1] = switcher.volume_level
+        elif "keypad" in ui[0]:
+            # TODO implement keypad support
+            pass
+
+    return listener
+
+
+# populate the lists and dictionaries; create and register watchers and listeners
+def setup_rooms(event=None):
+    print("setting up rooms")
+    device_ids = list(context.devices.ids())
+    # remove built in devices
+    # I need a better method of doing this
+    # Sometimes these change, causing exceptions
+    try:
+        print(device_ids)
+        device_ids.remove("franky")
+        device_ids.remove("idevice")
+        device_ids.remove("led")
+        print(device_ids)
+    except (ValueError, KeyError) as e:
+        print(e)
     print(device_ids)
     for device_id in device_ids:
         muse_device = context.devices.get(device_id)
         # build a set of rooms
         split_id = device_id.split("-")
         room_name = "-".join(split_id[:2])
-        rooms.append(room_name)
+        if not room_name in rooms:
+            print(f"adding {room_name} to room list")
+            rooms.append(room_name)
+            print(f"{rooms=}")
         # select driver based on device_id
         if "keypad" in device_id:
             uis[room_name] = (
                 device_id,
                 muse_device,
-            )  # extracting the device name from the device object later is trificult
+            )
         elif "touchpad" in device_id:
-            uis[room_name] = (device_id, muse_device)  # so I stash it in a tuple
+            uis[room_name] = (
+                device_id,
+                muse_device,
+            )
+        # can't find a way to get device_id from muse_device object so it gets stashed in a tuple
         elif "monitor" in device_id:
-            displays[room_name] = (device_id, driver.lg_driver(muse_device))
+            displays[room_name] = (device_id, driver.LGDriver(muse_device))
         elif "projector" in device_id:
-            displays[room_name] = (device_id, driver.epson_driver(muse_device))
+            # TODO add projector support
+            pass
         elif "switcher" in device_id:
-            switchers[room_name] = (device_id, driver.extron_driver(muse_device))
-
-
-def setup_rooms():
+            switchers[room_name] = (device_id, driver.ExtronDriver(muse_device))
     for room in rooms:
-        # get display control funtions
-        power_toggle_functions[room],
-        power_on_functions[room],
-        power_off_functions[room],
-        pic_mute_toggle_functions[room] = get_display_functions(displays[room])
-        switcher = switchers[room]
-
+        display = displays[room][1]
+        switcher = switchers[room][1]
         # setup button watchers for room
-        if "touchpad" in uis[room[0]]:
+        if "touchpad" in uis[room][0]:
             buttons = {
                 # muse listeners must accept an event argument. event.value tells you if the you are handling a press or release
                 # executes function on push, executes noop on release
-                # a funtion with no return is None, so I think this works
+                # a function with no return is None, so I think this works
                 "port/1/button/9": lambda event: (
-                    power_toggle_functions[room] if event.value else None
+                    display.toggle_power() if event.value else None
                 ),
-                # if muse needs a callable 'lambda: None' shoule work as a noop
                 "port/1/button/210": lambda event: (
-                    pic_mute_toggle_functions[room] if event.value else lambda: None
+                    display.toggle_pic_mute() if event.value else None
                 ),
                 "port/1/button/24": lambda event: (
-                    switcher.start_volume_ramp_up
+                    switcher.start_volume_ramp_up()
                     if event.value
                     else switcher.stop_volume_ramp_up
                 ),
                 "port/1/button/25": lambda event: (
-                    switcher.start_volume_ramp_down
+                    switcher.start_volume_ramp_down()
                     if event.value
                     else switcher.stop_volume_ramp_down
                 ),
                 "port/1/button/26": lambda event: (
-                    switcher.toggle_vol_mute if event.value else None
+                    switcher.toggle_vol_mute() if event.value else None
                 ),
                 "port/1/button/31": lambda event: (
-                    switcher.select_source_three if event.value else None
+                    switcher.select_source_three() if event.value else None
                 ),
                 "port/1/button/32": lambda event: (
-                    switcher.select_source_four if event.value else None
+                    switcher.select_source_four() if event.value else None
                 ),
                 "port/1/button/33": lambda event: (
-                    switcher.select_source_six if event.value else None
+                    switcher.select_source_six() if event.value else None
                 ),
             }
-        """
-        elif 'keypad' in uis[room[0]]:
-            buttons = {
-                "port/1/button/9": lambda event: power_on_functions[room],
-                "port/1/button/10": lambda event: power_off_functions[room],
-                "port/1/button/6": lambda event: pic_mute_toggle_functions[room],
-                "port/1/button/12": lambda event: pass, 
-                "port/1/button/13": lambda event: pass,
-                "port/1/button/1": lambda event: pass,
-                "port/1/button/2": lambda event: pass,
-                "port/1/button/5": lambda event: pass,
-            }
-        """
-        if "projector" in displays[room[0]]:
-            pass
-        elif "monitor" in displays[room[0]]:
-            pass
-        if "switcher" in switchers[room[0]]:
-            pass
         # register watchers
         for key, action in buttons.items():
             port = int(key.split("/")[1])
             id = int(key.split("/")[3])
-            uis[room].port[port].button[id].watch(action)
+            uis[room][1].port[port].button[id].watch(action)
 
-    # register feedback listeners with muse devicesa
-    displays[room][1].recieve.listen(display_listener)
+        # register feedback listeners with muse devicesa
+        displays[room][1].device.recieve.listen(
+            get_display_listener(uis[room], displays[room])
+        )
+        switchers[room][1].device.recieve.listen(
+            get_switcher_listener(uis[room], switchers[room])
+        )
+
+
+# get controller context
+muse = context.devices.get("idevice")
+print("starting script")
+# setup rooms when controller comes online
+setup_rooms()
+# muse.online(setup_rooms)

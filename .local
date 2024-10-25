@@ -1701,6 +1701,1194 @@
                     "md5": "1f8695ce4a516971ba3702c86278304f"
                 }
             ]
+        },
+        {
+            "date": "2024-10-24T16:39:39.202Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "db4a8bc3fcd3c62df3f5cf2d9dc004f0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "860b0204e0140fa2a90290498e14f539"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "d6da698872385edf48e55e607b11f313"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T16:43:30.032Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "db4a8bc3fcd3c62df3f5cf2d9dc004f0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "d6da698872385edf48e55e607b11f313"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T16:43:54.317Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "d6da698872385edf48e55e607b11f313"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T16:44:34.986Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "c52299485bbd10ad23e40c9df3c9c7ea"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T16:47:43.140Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "ef9c5b4672c5cf7bcec75c86e7ec5569"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T16:48:17.321Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "1e1966fdf36434dbb7a50db51e5acd00"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T16:56:22.980Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "a562316b1820759b841e098ce05bf1e3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T16:58:33.062Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "9f249a4d227a1889562490ef4c8b9864"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T18:29:40.675Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "c7cb71731986b984e86aaf90664d099e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T18:31:05.284Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "bae38d8d8830d2e5f4a582c1d96f09c6"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T18:47:24.133Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "c85c367455fdc5bf032a01fc2df312e9"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T18:49:04.357Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "49c4e6b21505c20537740f3cc9809339"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T18:52:46.975Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "f3b1a6fda5b2e7108a35486b60b3561c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T18:53:56.928Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "61990b8199b504032d7b262e68d04a04"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T18:55:03.010Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "ddd137de0cd71b6ea2e085943418cfa6"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T18:56:24.247Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "77e9b81a09f3fba99621c01584d48e87"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:01:51.998Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "41fecfdc5431f17f1e51842ae324fa38"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:02:41.343Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "d04949cd294d0406890ebe172ed9e96e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:03:19.365Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "86f0fc8186c5929170c61f4c84feecbc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:08:26.118Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "a932ad06b6056654ae306060fc6dd90c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:12:14.022Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "df2c34ea3ee2f844a43e4a99b3b628ff"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:20:39.660Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "125ef8c824d7fb0c10e2b264c0d64ee3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:25:49.271Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "145f161d5e8ea34854321e0aae723033"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:31:45.294Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "c39724549a1504240b25a231f9e9a258"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "d8c4e7030820f617027cee0632e70cf1"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:38:38.412Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "d8c4e7030820f617027cee0632e70cf1"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:41:42.626Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "0ba567a5816fa30ea5a9724eb6cd1633"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:43:40.275Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "d4bc8267a7f3a7e85bacc8bbd120a337"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:44:44.232Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "115d9b923047ca1348e80b897ac600e6"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:45:50.618Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "f27a7faed9ec8221d479576697390642"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "f119c127908206f9e9b7573b07518191"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:47:40.618Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "0da1fa44d2077926d14be6cb0e51eab8"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "f119c127908206f9e9b7573b07518191"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T19:50:40.595Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "0da1fa44d2077926d14be6cb0e51eab8"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "9db96af918bdc2788ef3a244ecdd466f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T20:00:02.615Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "0da1fa44d2077926d14be6cb0e51eab8"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "9cc2871bf47efa5f84d067fe0dbdb917"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T20:02:30.175Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "0da1fa44d2077926d14be6cb0e51eab8"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "33bea758f0798316ca06d499f99f2385"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T20:10:19.207Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "9d2579cd93d39dbb682f25ad31834bf4"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "33bea758f0798316ca06d499f99f2385"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T20:13:52.753Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "9d2579cd93d39dbb682f25ad31834bf4"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "33bea758f0798316ca06d499f99f2385"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T20:16:59.904Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "9d2579cd93d39dbb682f25ad31834bf4"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "27c0ebf8c82fa8429594db966b482a9c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T20:18:36.448Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "9d2579cd93d39dbb682f25ad31834bf4"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "4d3efb84339a976f98e63831d5bcac55"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T20:20:13.277Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "e37923a49037ac28c9d32fb47bb58ecf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "4d3efb84339a976f98e63831d5bcac55"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T20:21:16.666Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "92ade562da5de4cdfb8b510e142c46ca"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "4d3efb84339a976f98e63831d5bcac55"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T20:27:31.654Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "19b9c4efd6546861ffae9e2df523d085"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "4d3efb84339a976f98e63831d5bcac55"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T20:53:30.133Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "639109839e6467a73b3fca1c527677d3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "4d3efb84339a976f98e63831d5bcac55"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T20:54:21.092Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "880dc59867b3b0a161c4cbe1bdb7ad02"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "4d3efb84339a976f98e63831d5bcac55"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T21:01:43.095Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "880dc59867b3b0a161c4cbe1bdb7ad02"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "5dfcbfe4b92f81f6b79840e66ceaa51f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24T21:44:26.485Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\driver.py",
+                    "md5": "1edc7e2c7672a4444cf7be2081af83cd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\extron_driver.py",
+                    "md5": "880dc59867b3b0a161c4cbe1bdb7ad02"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "f05d44ecca948a6d333352a89886418b"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "b85ddcf8066ab2f50efed30e2ce97b2b"
+                }
+            ]
         }
     ]
 }

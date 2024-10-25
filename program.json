@@ -1,0 +1,10 @@
+{
+  "id": "AMXZilla",
+  "name": "AMXZilla",
+  "description": "description",
+  "disabled": false,
+  "provider": "python",
+  "scope": "",
+  "script": "index.py",
+  "envvars": {}
+}

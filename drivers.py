@@ -1,4 +1,57 @@
-import muse
+import mojo
+
+
+class LGDriver:
+
+    # commands
+    POWER_OFF_COMMAND = "ka 00 00\x0D"
+    POWER_ON_COMMAND = "ka 00 01\x0D"
+    PIC_MUTE_OFF_COMMAND = "kd 0 00\x0D"
+    PIC_MUTE_ON_COMMAND = "kd 1 01"
+    # acknowledgements
+    POWER_ON_ACK = "a 01 OK01x\x0D"
+    POWER_OFF_ACK = "a 01 OK00x\x0D"
+    PIC_MUTE_ON_ACK = "d 01 OK01x\x0D"
+    PIC_MUTE_OFF_ACK = "d 01 OK00x\x0D"
+
+    def __init__(self, device):
+        self.is_powered = False
+        self.pic_is_muted = False
+        self.device = device
+
+    def update_state(self, cls, feedback):
+        lines = feedback.split("\x0D")
+        for line in lines:
+            match line:
+                case cls.POWER_OFF_ACK:
+                    self.is_powered = False
+                case cls.POWER_ON_ACK:
+                    self.is_powered = True
+                case cls.PIC_MUTE_OFF_ACK:
+                    self.pic_is_muted = False
+                case cls.PIC_MUTE_ON_ACK:
+                    self.pic_is_muted = True
+
+    def toggle_power(self):
+        if self.is_powered:
+            self.device.send(self.POWER_OFF_COMMAND)
+        else:
+            self.device.send(self.POWER_ON_COMMAND)
+
+    def power_off(self):
+        self.device.send(self.POWER_OFF_COMMAND)
+
+    def power_on(self):
+        self.device.send(self.POWER_ON_COMMAND)
+
+    def toggle_pic_mute(self):
+        if self.pic_is_muted:
+            return self.PIC_MUTE_OFF_COMMAND
+        else:
+            return self.PIC_MUTE_ON_COMMAND
+
+
+import mojo
 import threading
 import time
 
@@ -21,8 +74,8 @@ class ExtronDriver:
 
     def __init__(self, device):
         self.is_ramping_up = threading.Event()
-        self.is_ramping_dn = threading.Event()
-        self.tcp_connection = device
+        self.is_ramping_down = threading.Event()
+        self.device = device
         self.input_three_is_active = False
         self.input_four_is_active = False
         self.input_six_is_active = False
@@ -31,6 +84,7 @@ class ExtronDriver:
     def update_state(self, feedback):
         lines = feedback.split("\r\n")
         for line in lines:
+            print(line)
             match line:
                 case "In03 All":
                     self.input_one, self.input_four, self.input_six = [
@@ -55,21 +109,21 @@ class ExtronDriver:
         elif line.startswith("GrpmD1"):
             self.volume_level = int(line.split("*")[1])
 
-    def ramp_volume_up(self, cls):
+    def ramp_volume_up(self):
         while self.is_ramping_up.is_set():
             target_volume_level = min(
-                self.volume_level + cls.VOLUME_DELTA, cls.MAX_VOLUME
+                self.volume_level + self.VOLUME_DELTA, self.MAX_VOLUME
             )
             self.device.send(f"\x1BD1*{target_volume_level}GRPM\r\n")
-            time.sleep(cls.SLEEP_TIME)
+            time.sleep(self.SLEEP_TIME)
 
-    def ramp_vol_down(self, cls):
+    def ramp_volume_down(self):
         while self.is_ramping_dn.is_set():
             target_volume_level = max(
-                self.volume_level - cls.VOLUME_DELTA, cls.MIN_VOLUME
+                self.volume_level - self.VOLUME_DELTA, self.MIN_VOLUME
             )
             self.device.send(f"\x1BD1*{target_volume_level}GRPM\r\n")
-            time.sleep(cls.SLEEP_TIME)
+            time.sleep(self.SLEEP_TIME)
 
     def start_volume_ramp_up(self):
         self.is_ramping_up.set()
@@ -85,3 +139,19 @@ class ExtronDriver:
 
     def stop_volume_ramp_down(self):
         self.is_ramping_dn.clear
+
+    def toggle_vol_mute(self):
+        print("toggle vol mute")
+        self.toggle_vol_mute()
+
+    def select_source_three(self):
+        print("select_source_three")
+        self.device.send(self.SOURCE_THREE_COMMAND)
+
+    def select_source_four(self):
+        print("select_source_four")
+        self.device.send(self.SOURCE_FOUR_COMMAND)
+
+    def select_source_six(self):
+        print("select_source_six")
+        self.device.send(self.SOURCE_SIX_COMMAND)
