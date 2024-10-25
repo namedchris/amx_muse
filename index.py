@@ -1,5 +1,5 @@
 from mojo import context
-import driver
+import drivers
 
 
 rooms = []
@@ -93,12 +93,12 @@ def setup_rooms(event=None):
             )
         # can't find a way to get device_id from muse_device object so it gets stashed in a tuple
         elif "monitor" in device_id:
-            displays[room_name] = (device_id, driver.LGDriver(muse_device))
+            displays[room_name] = (device_id, drivers.LGDriver(muse_device))
         elif "projector" in device_id:
             # TODO add projector support
             pass
         elif "switcher" in device_id:
-            switchers[room_name] = (device_id, driver.ExtronDriver(muse_device))
+            switchers[room_name] = (device_id, drivers.ExtronDriver(muse_device))
     for room in rooms:
         display = displays[room][1]
         switcher = switchers[room][1]
@@ -107,7 +107,6 @@ def setup_rooms(event=None):
             buttons = {
                 # muse listeners must accept an event argument. event.value tells you if the you are handling a press or release
                 # executes function on push, executes noop on release
-                # a function with no return is None, so I think this works
                 "port/1/button/9": lambda event: (
                     display.toggle_power() if event.value else None
                 ),
