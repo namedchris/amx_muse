@@ -3,6 +3,7 @@ import drivers
 
 uis = {}
 
+
 # create a listener for display feedback
 def get_display_listener(ui, display):
     def listener(event):
@@ -48,7 +49,8 @@ def get_switcher_listener(ui, switcher):
 
     return listener
 
-#parse a device ID to get room name 
+
+# parse a device ID to get room name
 def parse_device_id(device_id):
     split_id = device_id.split("-")
     room_name = "-".join(split_id[:2])
@@ -79,6 +81,7 @@ def populate_switchers(device_ids):
             switchers[room_name] = (device_id, drivers.ExtronDriver(muse_device))
     return switchers
 
+
 def populate_displays(device_ids):
     displays = {}
     for device_id in device_ids:
@@ -91,27 +94,35 @@ def populate_displays(device_ids):
             pass
     return displays
 
+
 def populate_uis(device_ids):
     uis = {}
     for device_id in device_ids:
         muse_device = context.devices.get(device_id)
         room_name = parse_device_id(device_id)
         if "keypad" in device_id:
-            uis[room_name] = (device_id,muse_device)
-        elif "touchpad" in device_id:uis[room_name] = (device_id,muse_device,)
-        #TODO implement touchpad support
+            uis[room_name] = (device_id, muse_device)
+        elif "touchpad" in device_id:
+            uis[room_name] = (
+                device_id,
+                muse_device,
+            )
+        # TODO implement touchpad support
     return uis
 
 
 # populate the lists and dictionaries; create and register watchers and listeners
 def setup_rooms(event=None):
     # remove built in devices
-    device_ids = prune_devices(list(context.devices.ids()),('franky','led','idevice'))
+    device_ids = prune_devices(
+        list(context.devices.ids()), ("franky", "led", "idevice")
+    )
     rooms = populate_rooms(device_ids)
     switchers = populate_switchers(device_ids)
     displays = populate_displays(device_ids)
     uis = populate_uis(device_ids)
     for room in rooms:
+        print(f"setting up room {room}")
         display = displays[room][1]
         switcher = switchers[room][1]
         # setup button watchers for room
@@ -119,16 +130,34 @@ def setup_rooms(event=None):
             buttons = {
                 # muse listeners must accept an event argument. event.value tells you if the you are handling a press or release
                 # executes function on push, executes noop on release
-                "port/1/button/9": lambda event: (display.toggle_power() if event.value else None),
-                "port/1/button/210": lambda event: (display.toggle_pic_mute() if event.value else None),
-                "port/1/button/24": lambda event: (switcher.start_volume_ramp_up() if event.value 
-                                                   else switcher.stop_volume_ramp_up),
-                "port/1/button/25": lambda event: (switcher.start_volume_ramp_down() if event.value 
-                                                   else switcher.stop_volume_ramp_down),
-                "port/1/button/26": lambda event: (switcher.toggle_vol_mute() if event.value else None),
-                "port/1/button/31": lambda event: (switcher.select_source_three() if event.value else None),
-                "port/1/button/32": lambda event: (switcher.select_source_four() if event.value else None),
-                "port/1/button/33": lambda event: (switcher.select_source_six() if event.value else None),
+                "port/1/button/9": lambda event: (
+                    display.toggle_power() if event.value else None
+                ),
+                "port/1/button/210": lambda event: (
+                    display.toggle_pic_mute() if event.value else None
+                ),
+                "port/1/button/24": lambda event: (
+                    switcher.start_volume_ramp_up()
+                    if event.value
+                    else switcher.stop_volume_ramp_up()
+                ),
+                "port/1/button/25": lambda event: (
+                    switcher.start_volume_ramp_down()
+                    if event.value
+                    else switcher.stop_volume_ramp_down()
+                ),
+                "port/1/button/26": lambda event: (
+                    switcher.toggle_vol_mute() if event.value else None
+                ),
+                "port/1/button/31": lambda event: (
+                    switcher.select_source_three() if event.value else None
+                ),
+                "port/1/button/32": lambda event: (
+                    switcher.select_source_four() if event.value else None
+                ),
+                "port/1/button/33": lambda event: (
+                    switcher.select_source_six() if event.value else None
+                ),
             }
         # register watchers
         for key, action in buttons.items():
@@ -143,6 +172,7 @@ def setup_rooms(event=None):
         switchers[room][1].device.recieve.listen(
             get_switcher_listener(uis[room], switchers[room])
         )
+
 
 # get controller context
 muse = context.devices.get("idevice")
