@@ -1,9 +1,6 @@
 from mojo import context
 import drivers
 
-uis = {}
-
-
 # create a listener for display feedback
 def get_display_listener(ui, display):
     def listener(event):
@@ -35,14 +32,13 @@ def get_switcher_listener(ui, switcher):
             data = str(event.arguments["data"].decode())
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
-        print(data)
-        switcher.update_state(data)
+        switcher[1].update_state(data)
         if "touchpad" in ui[0]:
-            ui[1].port[1].channel[31] = switcher.input_three_is_active
-            ui[1].port[1].channel[32] = switcher.input_four_is_active
-            ui[1].port[1].channel[33] = switcher.input_six_is_active
-            ui[1].port[1].channel[26] = switcher.vol_mute_is_active
-            ui[1].port[1].level[1] = switcher.volume_level
+            ui[1].port[1].channel[31] = switcher[1].input_three_is_active
+            ui[1].port[1].channel[32] = switcher[1].input_four_is_active
+            ui[1].port[1].channel[33] = switcher[1].input_six_is_active
+            ui[1].port[1].channel[26] = switcher[1].volume_is_muted
+            ui[1].port[1].level[1] = switcher[1].volume_level
         elif "keypad" in ui[0]:
             # TODO implement keypad support
             pass
@@ -166,12 +162,13 @@ def setup_rooms(event=None):
             uis[room][1].port[port].button[id].watch(action)
 
         # register feedback listeners with muse devicesa
-        displays[room][1].device.recieve.listen(
+        displays[room][1].device.receive.listen(
             get_display_listener(uis[room], displays[room])
         )
-        switchers[room][1].device.recieve.listen(
+        switchers[room][1].device.receive.listen(
             get_switcher_listener(uis[room], switchers[room])
         )
+    
 
 
 # get controller context
@@ -179,3 +176,5 @@ muse = context.devices.get("idevice")
 print("starting script")
 # setup rooms when controller comes online
 muse.online(setup_rooms)
+
+print("script complete")

@@ -1,4 +1,6 @@
 import mojo
+import threading
+import time
 
 
 class LGDriver:
@@ -55,12 +57,9 @@ class LGDriver:
             return self.PIC_MUTE_ON_COMMAND
 
 
-import mojo
-import threading
-import time
-
-
 class ExtronDriver:
+
+    SWITCHER_PASSWORD = "changeme"
 
     SOURCE_THREE_COMMAND = "3!\r"
     SOURCE_FOUR_COMMAND = "4!\r"
@@ -84,34 +83,38 @@ class ExtronDriver:
         self.input_four_is_active = False
         self.input_six_is_active = False
         self.volume_level = -400
+        self.volume_is_muted = False
 
     def update_state(self, feedback):
         lines = feedback.split("\r\n")
         for line in lines:
             print(line)
-            match line:
-                case "In03 All":
-                    self.input_three, self.input_four, self.input_six = (
+            if line.startswith("In03 All"):
+                    self.input_three_is_active, self.input_four_is_active, self.input_six_is_active = (
                         True,
                         False,
                         False,
                     )
-                case "In04 All":
-                    self.input_three, self.input_four, self.input_six = (
+            elif line.startswith("In04 All"):
+                    self.input_three_is_active, self.input_four_is_active, self.input_six_is_active = (
                         False,
                         True,
                         False,
                     )
-                case "In06 All":
-                    self.input_three, self.input_four, self.input_six = (
+            elif line.startswith("In06 All"):
+                    self.input_three_is_active, self.input_four_is_active, self.input_six_is_active = (
                         False,
                         False,
                         True,
                     )
-        if line.startswith("GrpmD2"):
-            self.volume_is_muted = line.split("*")[1]
-        elif line.startswith("GrpmD1"):
-            self.volume_level = int(line.split("*")[1])
+            if line.startswith("GrpmD2"):
+                self.volume_is_muted = line.split("*")[1]
+            elif line.startswith("GrpmD1"):
+                self.volume_level = int(line.split("*")[1])
+                print(f"{self.volume_level=}")
+            elif line.startswith("Password:"):
+                self.device.send(f"{self.SWITCHER_PASSWORD}\r")
+           
 
     def ramp_volume_up(self):
         while self.is_ramping_up.is_set():
@@ -153,6 +156,7 @@ class ExtronDriver:
 
     def select_source_three(self):
         print("select_source_three")
+        print(self.device)
         self.device.send(self.SOURCE_THREE_COMMAND)
 
     def select_source_four(self):
