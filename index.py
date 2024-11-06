@@ -12,12 +12,12 @@ def get_display_listener(ui, display):
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
         # update driver state
-        display[1].recv_buffer += data
-        display[1].update_state()
+        display.recv_buffer += data
+        display.update_state()
         if "touchpad" in ui[0]:
             # update button state
-            power_button.value = display[1].power_is_on
-            pic_mute_button.value = display[1].pic_mute_is_on
+            power_button.value = display.power_is_on
+            pic_mute_button.value = display.pic_mute_is_on
         elif "keypad" in ui[0]:
             # TODO implement keypad support
             pass
@@ -33,13 +33,13 @@ def get_switcher_listener(ui, switcher):
             data = str(event.arguments["data"].decode())
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
-        switcher[1].update_state(data)
+        switcher.update_state(data)
         if "touchpad" in ui[0]:
-            ui[1].port[1].channel[31] = switcher[1].input_three_is_active
-            ui[1].port[1].channel[32] = switcher[1].input_four_is_active
-            ui[1].port[1].channel[33] = switcher[1].input_six_is_active
-            ui[1].port[1].channel[26] = switcher[1].volume_is_muted
-            ui[1].port[1].level[1] = switcher[1].get_normalized_volume()*255
+            ui[1].port[1].channel[31] = switcher.input_three_is_active
+            ui[1].port[1].channel[32] = switcher.input_four_is_active
+            ui[1].port[1].channel[33] = switcher.input_six_is_active
+            ui[1].port[1].channel[26] = switcher.volume_is_muted
+            ui[1].port[1].level[1] = switcher.get_normalized_volume()*255
         elif "keypad" in ui[0]:
             # TODO implement keypad support
             pass
@@ -75,7 +75,7 @@ def populate_switchers(device_ids):
         muse_device = context.devices.get(device_id)
         room_name = parse_device_id(device_id)
         if "switcher" in device_id:
-            switchers[room_name] = (device_id, drivers.ExtronDriver(muse_device))
+            switchers[room_name] = drivers.ExtronDriver(device_id,muse_device)
     return switchers
 
 
@@ -85,7 +85,7 @@ def populate_displays(device_ids):
         muse_device = context.devices.get(device_id)
         room_name = parse_device_id(device_id)
         if "monitor" in device_id:
-            displays[room_name] = (device_id, drivers.LGDriver(muse_device))
+            displays[room_name] = drivers.LGDriver(device_id, muse_device)
         elif "projector" in device_id:
             # TODO add projector support
             pass
@@ -120,8 +120,8 @@ def setup_rooms(event=None):
     uis = populate_uis(device_ids)
     for room in rooms:
         print(f"setting up room {room}")
-        display = displays[room][1]
-        switcher = switchers[room][1]
+        display = displays[room]
+        switcher = switchers[room]
         # setup button watchers for room
         if "touchpad" in uis[room][0]:
             buttons = {
@@ -163,10 +163,10 @@ def setup_rooms(event=None):
             uis[room][1].port[port].button[id].watch(action)
 
         # register feedback listeners with muse devicesa
-        displays[room][1].device.receive.listen(
+        displays[room].device.receive.listen(
             get_display_listener(uis[room], displays[room])
         )
-        switchers[room][1].device.receive.listen(
+        switchers[room].device.receive.listen(
             get_switcher_listener(uis[room], switchers[room])
         )
     

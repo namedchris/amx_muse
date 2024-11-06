@@ -20,11 +20,13 @@ class LGDriver:
     # errors
     POWER_ON_ERROR = "a 01 NG01x" #returned when powered on monitor is asked to power on
 
-    def __init__(self, device):
+    def __init__(self, device_id, device):
+        self.device_id = device_id
+        self.device = device
         self.power_is_on = False
         self.pic_mute_is_on = False
-        self.device = device
         self.recv_buffer = ''
+        
 
     def update_state(self):
         lines = []
@@ -90,9 +92,10 @@ class ExtronDriver:
     input_six_is_active = False
     volume_level = -400
 
-    def __init__(self, device):
+    def __init__(self, device_id, device):
         self.is_ramping_up = threading.Event()
         self.is_ramping_down = threading.Event()
+        self.device_id = device_id
         self.device = device
         self.input_three_is_active = False
         self.input_four_is_active = False

@@ -8140,6 +8140,124 @@
                     "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
                 }
             ]
+        },
+        {
+            "date": "2024-11-06T15:52:38.401Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\drivers.py",
+                    "md5": "3ead81d3fe104c6aa71622bc43c49c1c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "896c502b36d4b6676ebfbb2e554fee37"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "5d7c80fa9206462efcc37cd8a98db362"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "16bb2f06c2062948974e66ccdac859ea"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2024-11-06T15:53:12.020Z",
+            "program": "AMXZilla",
+            "controller": "muse-dev.av.ilstu.edu",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\drivers.py",
+                    "md5": "3ead81d3fe104c6aa71622bc43c49c1c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\index.py",
+                    "md5": "264cfadace5275cfda21055fd25c9806"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\program.json",
+                    "md5": "1f8695ce4a516971ba3702c86278304f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "5d7c80fa9206462efcc37cd8a98db362"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "625637b83ddd0fefb7a5bd2df8fe9462"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_zilla\\AMXZilla\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
         }
     ]
 }
