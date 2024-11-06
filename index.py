@@ -5,8 +5,6 @@ import drivers
 def get_display_listener(ui, display):
     def listener(event):
         nonlocal ui, display
-        power_button = ui[1].port[1].channel[9]
-        pic_mute_button = ui[1].port[1].channel[210]
         try:
             data = str(event.arguments["data"].decode())
         except UnicodeDecodeError as err:
@@ -14,11 +12,13 @@ def get_display_listener(ui, display):
         # update driver state
         display.recv_buffer += data
         display.update_state()
-        if "touchpad" in ui[0]:
+        if "touchpad" in ui.device_id:
             # update button state
+            power_button = ui.device.port[1].channel[9]
+            pic_mute_button = ui.device.port[1].channel[210]
             power_button.value = display.power_is_on
             pic_mute_button.value = display.pic_mute_is_on
-        elif "keypad" in ui[0]:
+        elif "keypad" in ui.device_id:
             # TODO implement keypad support
             pass
 
@@ -34,13 +34,13 @@ def get_switcher_listener(ui, switcher):
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
         switcher.update_state(data)
-        if "touchpad" in ui[0]:
-            ui[1].port[1].channel[31] = switcher.input_three_is_active
-            ui[1].port[1].channel[32] = switcher.input_four_is_active
-            ui[1].port[1].channel[33] = switcher.input_six_is_active
-            ui[1].port[1].channel[26] = switcher.volume_is_muted
-            ui[1].port[1].level[1] = switcher.get_normalized_volume()*255
-        elif "keypad" in ui[0]:
+        if "touchpad" in ui.device_id:
+            ui.device.port[1].channel[31] = switcher.input_three_is_active
+            ui.device.port[1].channel[32] = switcher.input_four_is_active
+            ui.device.port[1].channel[33] = switcher.input_six_is_active
+            ui.device.port[1].channel[26] = switcher.volume_is_muted
+            ui.device.port[1].level[1] = switcher.get_normalized_volume()*255
+        elif "keypad" in ui.device_id:
             # TODO implement keypad support
             pass
 
@@ -98,13 +98,9 @@ def populate_uis(device_ids):
         muse_device = context.devices.get(device_id)
         room_name = parse_device_id(device_id)
         if "keypad" in device_id:
-            uis[room_name] = (device_id, muse_device)
+            uis[room_name] = drivers.KeypadDriver(device_id, muse_device)
         elif "touchpad" in device_id:
-            uis[room_name] = (
-                device_id,
-                muse_device,
-            )
-        # TODO implement touchpad support
+            uis[room_name] = drivers.Touchpad(device_id,muse_device)
     return uis
 
 
@@ -123,7 +119,7 @@ def setup_rooms(event=None):
         display = displays[room]
         switcher = switchers[room]
         # setup button watchers for room
-        if "touchpad" in uis[room][0]:
+        if "touchpad" in uis[room].device_id:
             buttons = {
                 # muse listeners must accept an event argument. event.value tells you if the you are handling a press or release
                 # executes function on push, executes noop on release
@@ -160,7 +156,7 @@ def setup_rooms(event=None):
         for key, action in buttons.items():
             port = int(key.split("/")[1])
             id = int(key.split("/")[3])
-            uis[room][1].port[port].button[id].watch(action)
+            uis[room].device.port[port].button[id].watch(action)
 
         # register feedback listeners with muse devicesa
         displays[room].device.receive.listen(

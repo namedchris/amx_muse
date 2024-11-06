@@ -1,8 +1,25 @@
 import mojo
 import threading
 import time
-import io
-from collections import deque
+
+
+class EpsonDriver:
+
+    POWER_ON_COMMAND = "PWR ON\r\n"
+    POWER_OFF_COMMAND = "POW OFF\r\n"
+    POWER_QUERY = "POW?\r\n"
+
+    MUTE_ON_COMMAND = "MUTE ON\r\n"
+    MUTE_OFF_COMMAND = "MUTE OFF\r\n"
+    MUTE_QUERY = "MUTE?\r\n"
+
+    def __init__(self, device_id, device):
+        self.device_id = device_id
+        self.device = device
+        self.power_is_on = False
+        self.pic_mute_is_on = False
+        self.recv_buffer = ''
+
 
 
 class LGDriver:
