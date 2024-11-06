@@ -198,3 +198,15 @@ class ExtronDriver:
     def select_source_six(self):
         print("select_source_six")
         self.device.send(self.SOURCE_SIX_COMMAND)
+
+class TouchpadDriver:
+
+    def __init__(device_id, device, self):
+        self.device_id = device_id
+        self.device = device
+    
+class KeyPadDriver:
+
+    def __init__(device_id, device, self):
+        self.device_id = device_id
+        self.device = device
