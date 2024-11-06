@@ -5,18 +5,19 @@ import drivers
 def get_display_listener(ui, display):
     def listener(event):
         nonlocal ui, display
-        power_button = ui.port[1].channel[9]
-        pic_mute_button = ui.port[1].channel[210]
+        power_button = ui[1].port[1].channel[9]
+        pic_mute_button = ui[1].port[1].channel[210]
         try:
             data = str(event.arguments["data"].decode())
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
         # update driver state
-        display.update_state(data)
+        display[1].recv_buffer += data
+        display[1].update_state()
         if "touchpad" in ui[0]:
             # update button state
-            power_button.value = display.power_is_on
-            pic_mute_button.value = display.pic_mute_is_on
+            power_button.value = display[1].power_is_on
+            pic_mute_button.value = display[1].pic_mute_is_on
         elif "keypad" in ui[0]:
             # TODO implement keypad support
             pass
@@ -38,7 +39,7 @@ def get_switcher_listener(ui, switcher):
             ui[1].port[1].channel[32] = switcher[1].input_four_is_active
             ui[1].port[1].channel[33] = switcher[1].input_six_is_active
             ui[1].port[1].channel[26] = switcher[1].volume_is_muted
-            ui[1].port[1].level[1] = switcher[1].volume_level
+            ui[1].port[1].level[1] = switcher[1].get_normalized_volume()*255
         elif "keypad" in ui[0]:
             # TODO implement keypad support
             pass

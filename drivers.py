@@ -1,6 +1,8 @@
 import mojo
 import threading
 import time
+import io
+from collections import deque
 
 
 class LGDriver:
@@ -11,32 +13,43 @@ class LGDriver:
     PIC_MUTE_OFF_COMMAND = "kd 0 00\x0D"
     PIC_MUTE_ON_COMMAND = "kd 1 01\x0D"
     # acknowledgements
-    POWER_ON_ACK = "a 01 OK01x\x0D"
-    POWER_OFF_ACK = "a 01 OK00x\x0D"
-    PIC_MUTE_ON_ACK = "d 01 OK01x\x0D"
-    PIC_MUTE_OFF_ACK = "d 01 OK00x\x0D"
+    POWER_ON_ACK = "a 01 OK01x"
+    POWER_OFF_ACK = "a 01 OK00x"
+    PIC_MUTE_ON_ACK = "d 01 OK01x"
+    PIC_MUTE_OFF_ACK = "d 01 OK00x"
+    # errors
+    POWER_ON_ERROR = "a 01 NG01x" #returned when powered on monitor is asked to power on
 
     def __init__(self, device):
-        self.is_powered = False
-        self.pic_is_muted = False
+        self.power_is_on = False
+        self.pic_mute_is_on = False
         self.device = device
+        self.recv_buffer = ''
 
-    def update_state(self, cls, feedback):
-        lines = feedback.split("\x0D")
+    def update_state(self):
+        lines = []
+        # consume buffer, appending lines to lines, leaving unterminated lines in the buffer
+        while 'x' in self.recv_buffer:
+            items = self.recv_buffer.partition('x')
+            line = items[0]+items[1]
+            self.recv_buffer = items[2]
+            print(f"{line=}\n{self.recv_buffer=}")
+            lines.append(line)
         for line in lines:
+            print(f"{line=}")
             match line:
-                case cls.POWER_OFF_ACK:
-                    self.is_powered = False
-                case cls.POWER_ON_ACK:
-                    self.is_powered = True
-                case cls.PIC_MUTE_OFF_ACK:
-                    self.pic_is_muted = False
-                case cls.PIC_MUTE_ON_ACK:
-                    self.pic_is_muted = True
+                case self.POWER_OFF_ACK:
+                    self.power_is_on = False
+                case self.POWER_ON_ACK | self.POWER_ON_ERROR:
+                    self.power_is_on = True
+                case self.PIC_MUTE_OFF_ACK:
+                    self.pic_mute_is_on = False
+                case self.PIC_MUTE_ON_ACK:
+                    self.pic_mute_is_on = True
 
     def toggle_power(self):
         print("toggle power")
-        if self.is_powered:
+        if self.power_is_on:
             self.device.send(self.POWER_OFF_COMMAND)
         else:
             self.device.send(self.POWER_ON_COMMAND)
@@ -51,10 +64,10 @@ class LGDriver:
 
     def toggle_pic_mute(self):
         print("toggle pic mute")
-        if self.pic_is_muted:
-            return self.PIC_MUTE_OFF_COMMAND
+        if self.pic_mute_is_on:
+            self.device.send(self.PIC_MUTE_OFF_COMMAND)
         else:
-            return self.PIC_MUTE_ON_COMMAND
+            self.device.send(self.PIC_MUTE_ON_COMMAND)
 
 
 class ExtronDriver:
@@ -64,6 +77,8 @@ class ExtronDriver:
     SOURCE_THREE_COMMAND = "3!\r"
     SOURCE_FOUR_COMMAND = "4!\r"
     SOURCE_SIX_COMMAND = "6!\r"
+    VOL_MUTE_OFF_COMMAND = '\x1BD2*0GRPM\r\n'
+    VOL_MUTE_ON_COMMAND = '\x1BD2*1GRPM\r\n'
 
     VOLUME_DELTA = 10
     MIN_VOLUME = -500
@@ -84,6 +99,13 @@ class ExtronDriver:
         self.input_six_is_active = False
         self.volume_level = -400
         self.volume_is_muted = False
+    
+    #returns volume as a percentage of the MIN_VOLUME - MAX_VOLUME  range
+    def get_normalized_volume(self):
+        range = self.MAX_VOLUME - self.MIN_VOLUME
+        offset = 0-self.MIN_VOLUME
+        normalized_volume = (self.volume_level + offset)/range
+        return normalized_volume    
 
     def update_state(self, feedback):
         lines = feedback.split("\r\n")
@@ -108,7 +130,7 @@ class ExtronDriver:
                         True,
                     )
             if line.startswith("GrpmD2"):
-                self.volume_is_muted = line.split("*")[1]
+                self.volume_is_muted = False if (line.split("*")[1]) == '0' else True
             elif line.startswith("GrpmD1"):
                 self.volume_level = int(line.split("*")[1])
                 print(f"{self.volume_level=}")
@@ -153,6 +175,13 @@ class ExtronDriver:
     def toggle_vol_mute(self):
         print("toggle vol mute")
         # TODO send toggle vol mute command
+        print(f"{self.volume_is_muted=}")
+        if self.volume_is_muted:
+            print("sending mute off")
+            self.device.send(self.VOL_MUTE_OFF_COMMAND)
+        else:
+            print("sending mute on")
+            self.device.send(self.VOL_MUTE_ON_COMMAND)
 
     def select_source_three(self):
         print("select_source_three")
