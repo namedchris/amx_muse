@@ -100,7 +100,7 @@ def populate_uis(device_ids):
         if "keypad" in device_id:
             uis[room_name] = drivers.KeypadDriver(device_id, muse_device)
         elif "touchpad" in device_id:
-            uis[room_name] = drivers.Touchpad(device_id,muse_device)
+            uis[room_name] = drivers.TouchpadDriver(device_id,muse_device)
     return uis
 
 
@@ -116,8 +116,10 @@ def setup_rooms(event=None):
     uis = populate_uis(device_ids)
     for room in rooms:
         print(f"setting up room {room}")
-        display = displays[room]
-        switcher = switchers[room]
+        if room in displays:
+            display = displays[room]
+        if room in switchers:
+            switcher = switchers[room]
         # setup button watchers for room
         if "touchpad" in uis[room].device_id:
             buttons = {
@@ -152,19 +154,23 @@ def setup_rooms(event=None):
                     switcher.select_source_six() if event.value else None
                 ),
             }
+            print(f"Buttons configured for {uis[room].device_id}")
         # register watchers
         for key, action in buttons.items():
             port = int(key.split("/")[1])
             id = int(key.split("/")[3])
             uis[room].device.port[port].button[id].watch(action)
+            print(f"Button watchers registered for {uis[room].device_id}")
 
         # register feedback listeners with muse devicesa
-        displays[room].device.receive.listen(
-            get_display_listener(uis[room], displays[room])
-        )
-        switchers[room].device.receive.listen(
-            get_switcher_listener(uis[room], switchers[room])
-        )
+        if room in displays:
+            displays[room].device.receive.listen(
+                get_display_listener(uis[room], displays[room])
+            )
+        if room in switchers:    
+            switchers[room].device.receive.listen(
+                get_switcher_listener(uis[room], switchers[room])
+            )
     
 
 
@@ -175,3 +181,4 @@ print("starting script")
 muse.online(setup_rooms)
 
 print("script complete")
+

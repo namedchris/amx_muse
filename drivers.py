@@ -218,12 +218,12 @@ class ExtronDriver:
 
 class TouchpadDriver:
 
-    def __init__(device_id, device, self):
+    def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device
     
 class KeyPadDriver:
 
-    def __init__(device_id, device, self):
+    def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device

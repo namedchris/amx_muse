@@ -8258,6 +8258,1259 @@
                     "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
                 }
             ]
+        },
+        {
+            "date": "2025-04-15T19:00:23.179Z",
+            "program": "amx_muse",
+            "controller": "172.30.65.3",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\index",
+                    "md5": "03ab785ea409819aa6d4ec35d65bf123"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.idx",
+                    "md5": "373d2f3875fae231644ea269f9ab323e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.pack",
+                    "md5": "e3532df7fe1b5635b10d00eb4a37be8e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.rev",
+                    "md5": "4a7615aec85ef7257661cf15ea29d4c0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\packed-refs",
+                    "md5": "6ea5ccdb155a0fd24eb947ce97d7c6a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "3c33c7652dd46e30a081988fdfe70d22"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\drivers.py",
+                    "md5": "f7d601fce307a4475bd5551de42fb404"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\index.py",
+                    "md5": "a75af236fd0a90daac49e09be6ced739"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-15T19:58:00.436Z",
+            "program": "amx_muse",
+            "controller": "172.30.65.3",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\index",
+                    "md5": "03ab785ea409819aa6d4ec35d65bf123"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.idx",
+                    "md5": "373d2f3875fae231644ea269f9ab323e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.pack",
+                    "md5": "e3532df7fe1b5635b10d00eb4a37be8e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.rev",
+                    "md5": "4a7615aec85ef7257661cf15ea29d4c0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\packed-refs",
+                    "md5": "6ea5ccdb155a0fd24eb947ce97d7c6a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "3c33c7652dd46e30a081988fdfe70d22"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\drivers.py",
+                    "md5": "f7d601fce307a4475bd5551de42fb404"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\index.py",
+                    "md5": "b083ae605863f0b39c23323221abb0c7"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-15T20:10:42.262Z",
+            "program": "amx_muse",
+            "controller": "172.30.65.3",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\index",
+                    "md5": "03ab785ea409819aa6d4ec35d65bf123"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.idx",
+                    "md5": "373d2f3875fae231644ea269f9ab323e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.pack",
+                    "md5": "e3532df7fe1b5635b10d00eb4a37be8e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.rev",
+                    "md5": "4a7615aec85ef7257661cf15ea29d4c0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\packed-refs",
+                    "md5": "6ea5ccdb155a0fd24eb947ce97d7c6a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "3c33c7652dd46e30a081988fdfe70d22"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\drivers.py",
+                    "md5": "f7d601fce307a4475bd5551de42fb404"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\index.py",
+                    "md5": "53935cf5c7f1211578f4e474ec5ea725"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-15T20:14:20.953Z",
+            "program": "amx_muse",
+            "controller": "172.30.65.3",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\index",
+                    "md5": "03ab785ea409819aa6d4ec35d65bf123"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.idx",
+                    "md5": "373d2f3875fae231644ea269f9ab323e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.pack",
+                    "md5": "e3532df7fe1b5635b10d00eb4a37be8e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.rev",
+                    "md5": "4a7615aec85ef7257661cf15ea29d4c0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\packed-refs",
+                    "md5": "6ea5ccdb155a0fd24eb947ce97d7c6a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "3c33c7652dd46e30a081988fdfe70d22"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\drivers.py",
+                    "md5": "0186b78708da972bc94223dffb0a4ca6"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\index.py",
+                    "md5": "53935cf5c7f1211578f4e474ec5ea725"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-15T20:19:06.325Z",
+            "program": "amx_muse",
+            "controller": "172.30.65.3",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\index",
+                    "md5": "03ab785ea409819aa6d4ec35d65bf123"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.idx",
+                    "md5": "373d2f3875fae231644ea269f9ab323e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.pack",
+                    "md5": "e3532df7fe1b5635b10d00eb4a37be8e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.rev",
+                    "md5": "4a7615aec85ef7257661cf15ea29d4c0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\packed-refs",
+                    "md5": "6ea5ccdb155a0fd24eb947ce97d7c6a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "3c33c7652dd46e30a081988fdfe70d22"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\drivers.py",
+                    "md5": "0186b78708da972bc94223dffb0a4ca6"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\index.py",
+                    "md5": "7b6f54c27fc63788a81610433057d494"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-15T20:20:45.031Z",
+            "program": "amx_muse",
+            "controller": "172.30.65.3",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\index",
+                    "md5": "03ab785ea409819aa6d4ec35d65bf123"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.idx",
+                    "md5": "373d2f3875fae231644ea269f9ab323e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.pack",
+                    "md5": "e3532df7fe1b5635b10d00eb4a37be8e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.rev",
+                    "md5": "4a7615aec85ef7257661cf15ea29d4c0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\packed-refs",
+                    "md5": "6ea5ccdb155a0fd24eb947ce97d7c6a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "3c33c7652dd46e30a081988fdfe70d22"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\drivers.py",
+                    "md5": "0186b78708da972bc94223dffb0a4ca6"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\index.py",
+                    "md5": "7fb9bfce518902d249ef74a637b96fb2"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-15T20:25:57.302Z",
+            "program": "amx_muse",
+            "controller": "172.30.65.3",
+            "files": [
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\index",
+                    "md5": "03ab785ea409819aa6d4ec35d65bf123"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "55e61ad6b8d3262b61bc7811b03b2cdf"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.idx",
+                    "md5": "373d2f3875fae231644ea269f9ab323e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.pack",
+                    "md5": "e3532df7fe1b5635b10d00eb4a37be8e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\objects\\pack\\pack-3835ca0443975a30d124748091cd759059cfdcaf.rev",
+                    "md5": "4a7615aec85ef7257661cf15ea29d4c0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\packed-refs",
+                    "md5": "6ea5ccdb155a0fd24eb947ce97d7c6a3"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "3c33c7652dd46e30a081988fdfe70d22"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\drivers.py",
+                    "md5": "0186b78708da972bc94223dffb0a4ca6"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\index.py",
+                    "md5": "b47cde2a5c276f26aca7554ecf9fde57"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\crmorga\\projects\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
         }
     ]
 }
