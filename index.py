@@ -1,5 +1,6 @@
 from mojo import context
 import drivers
+import asyncio
 
 # create a listener for display feedback
 def get_display_listener(ui, display):
@@ -172,13 +173,19 @@ def setup_rooms(event=None):
                 get_switcher_listener(uis[room], switchers[room])
             )
     
-
+async def setup_new_rooms():
+    while True:
+        setup_rooms()
+        await(30)
 
 # get controller context
 muse = context.devices.get("idevice")
 print("starting script")
 # setup rooms when controller comes online
 muse.online(setup_rooms)
-
+try:
+    device_detection_loop_task = asyncio.create_task(setup_new_rooms)
+except asyncio.CancelledError:
+    raise
 print("script complete")
 
