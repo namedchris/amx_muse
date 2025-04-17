@@ -221,6 +221,11 @@ class TouchpadDriver:
     def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device
+
+    def set_label():
+        room,number,type,index = device_id.split("-")
+        room_name - room + number
+        device.send_command("'^TXT-201,0,', room_name")    
     
 class KeyPadDriver:
 
