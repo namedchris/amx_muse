@@ -6,10 +6,8 @@ class DeviceRecord:
     def __init__(self,device_id,muse_device):
         self.device_id = device_id
         self.muse_device = muse_device
-
-    
-        self.kind = device_id.split("-")[3]
-
+        self.kind = device_id.split("-")[2]
+        self.driver = None
         match self.kind:
             case "switcher":
                 self.driver = drivers.ExtronDriver(device_id, muse_device)
@@ -23,7 +21,7 @@ class DeviceRecord:
                 self.driver = drivers.EpsonDriver(device_id,muse_device)
         split_id = device_id.split("-")
         self.room = "-".join(split_id[:2])
-
+        print(vars(self))#!
 
 class DeviceRegistry:
     def __init__(self):
@@ -101,8 +99,7 @@ def get_display_listener(ui, display):
         elif "keypad" in ui.device_id:
             # TODO implement keypad support
             pass
-
-
+    return listener
 
 # create a listener for switchers
 def get_switcher_listener(ui, switcher):
@@ -123,7 +120,6 @@ def get_switcher_listener(ui, switcher):
         elif "keypad" in ui.device_id:
             # TODO implement keypad support
             pass
-
     return listener
 
 
@@ -155,10 +151,11 @@ def setup_rooms(event=None):
         print(f"{device_records=}")#!
         for device_record in device_records:
             # setup button watchers for room
-            display = device_registry.get_display_record_by_room(room)
-            switcher = device_registry.get_switcher_record_by_room(room)
-            print(f"{display=} and {switcher=}")
-            if not display or not switcher:
+            display_record = device_registry.get_display_record_by_room(room)
+            switcher_record = device_registry.get_switcher_record_by_room(room)
+            ui_record = device_registry.get_ui_record_by_room(room)
+            print(f"Line 160: {display_record=} and {switcher_record=}")#!
+            if not display_record or not switcher_record:
                 continue
             if device_record.kind == "touchpad":
                 print("setting up room")#!
@@ -166,52 +163,48 @@ def setup_rooms(event=None):
                     # muse listeners must accept an event argument. event.value tells you if the you are handling a press or release
                     # executes function on push, executes noop on release
                     "port/1/button/9": lambda event: (
-                        display.toggle_power() if event.value else None
+                        display_record.toggle_power() if event.value else None
                     ),
                     "port/1/button/210": lambda event: (
-                        display.toggle_pic_mute() if event.value else None
+                        display_record.toggle_pic_mute() if event.value else None
                     ),
                     "port/1/button/24": lambda event: (
-                        switcher.start_volume_ramp_up()
+                        switcher_record.start_volume_ramp_up()
                         if event.value
-                        else switcher.stop_volume_ramp_up()
+                        else switcher_record.stop_volume_ramp_up()
                     ),
                     "port/1/button/25": lambda event: (
-                        switcher.start_volume_ramp_down()
+                        switcher_record.start_volume_ramp_down()
                         if event.value
-                        else switcher.stop_volume_ramp_down()
+                        else switcher_record.stop_volume_ramp_down()
                     ),
                     "port/1/button/26": lambda event: (
-                        switcher.toggle_vol_mute() if event.value else None
+                        switcher_record.toggle_vol_mute() if event.value else None
                     ),
                     "port/1/button/31": lambda event: (
-                        switcher.select_source_three() if event.value else None
+                        switcher_record.select_source_three() if event.value else None
                     ),
                     "port/1/button/32": lambda event: (
-                        switcher.select_source_four() if event.value else None
+                        switcher_record.select_source_four() if event.value else None
                     ),
                     "port/1/button/33": lambda event: (
-                        switcher.select_source_six() if event.value else None
+                        switcher_record.select_source_six() if event.value else None
                     ),
                 }
-                print(f"Buttons configured for {uis[room].device_id}")
+                print(f"Buttons configured for {room}")
                 # register watchers
                 for key, action in buttons.items():
                     port = int(key.split("/")[1])
                     id = int(key.split("/")[3])
-                    uis[room].device.port[port].button[id].watch(action)
-                    print(f"Button watchers registered for {uis[room].device_id}")
+                    ui_record.muse_device.device.port[port].button[id].watch(action)
+                    print(f"Button watchers registered for {room}")
 
-        # register feedback listeners with muse devicesa
-        if room in displays:
-            print("room is in displays")#!
-            displays[room].device.receive.listen(
-                get_display_listener(uis[room], displays[room])
+            # register feedback listeners with muse devices
+            display_record.muse_device.device.receive.listen(
+                get_display_listener(ui_record.muse_device, display_record.driver)
             )
-        if room in switchers: 
-            print("room is in switchers")#!
-            switchers[room].device.receive.listen(
-                get_switcher_listener(uis[room], switchers[room])
+            switcher_record.muse_device.device.receive.listen(
+                get_switcher_listener(ui_record.muse_device, switcher_record.driver)
             )
 
 tick = context.services.get("timeline") 
