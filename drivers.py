@@ -92,7 +92,6 @@ class LGDriver:
 
 
 class ExtronDriver:
-    
     SOURCE_THREE_COMMAND = "3!\r"
     SOURCE_FOUR_COMMAND = "4!\r"
     SOURCE_SIX_COMMAND = "6!\r"
@@ -121,6 +120,7 @@ class ExtronDriver:
         self.volume_is_muted = False
     
     #returns volume as a percentage of the MIN_VOLUME - MAX_VOLUME  range
+    #The math here will evaluate to the correct volume percentage even with different MIN_VOLUME and MAX_VOLUME values
     def get_normalized_volume(self):
         range = self.MAX_VOLUME - self.MIN_VOLUME
         offset = 0-self.MIN_VOLUME
@@ -228,6 +228,7 @@ class TouchpadDriver:
     def set_label(self):
         room,number,type,index = self.device_id.split("-")
         self.device.port[1].send_command(f"^TXT-201,0,{room.upper()}-{number}")   
+
     
 class KeyPadDriver:
 
