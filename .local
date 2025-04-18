@@ -16617,6 +16617,1905 @@
                     "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
                 }
             ]
+        },
+        {
+            "date": "2025-04-18T13:09:33.071Z",
+            "program": "amx_muse",
+            "controller": "192.168.0.5",
+            "files": [
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\COMMIT_EDITMSG",
+                    "md5": "9add4f856728c140b9d29593797afe74"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\FETCH_HEAD",
+                    "md5": "f59146feb5933eb4cef3f03677572cae"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\index",
+                    "md5": "94e9b2dfebbe851f9e1391e0c0ce0c26"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "29d50a4b184ae9d36c853ea867a729b9"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\0a\\dfcb12fb93bf74f58be231b0f4863c7356f552",
+                    "md5": "981fbb7679e94523be6841c7a468391b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\60\\a8accf2f1db3706f7cc52fc6095afcf0afad40",
+                    "md5": "f2953309b607c217f1bf5f008c380190"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\61\\feb279a18a16cedf0ebe2329e4a18e79ecceba",
+                    "md5": "cdce89ddac29bc2a59043dd84af86418"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\9f\\f05883517cc72b580ecc5e4337ea24d115b495",
+                    "md5": "6a703f84771af05b7744f4ca23dbc49d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\b8\\65b69f904d642c8230088f3cfb646fd4c604b3",
+                    "md5": "368313a8836e4c5aa5cd5d2163d69b6b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.idx",
+                    "md5": "9185ba760028610a20b9ade65ab1826d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.pack",
+                    "md5": "ebab69c42f0ebfa3823273dde5044dc4"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.rev",
+                    "md5": "e9669bfda11e9740d03fea51165c5d4c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\packed-refs",
+                    "md5": "293264d28182e0c1bff37cf3893d6638"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "0f7d80c9724482c4ca1f32c2f148ed35"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.gitignore",
+                    "md5": "93913be8432821e061503889158ef814"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\drivers.py",
+                    "md5": "69fb3ecf5e900e49bc047f902137927f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\index.py",
+                    "md5": "d8de7773cb36f036efa0021eb0accd15"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-18T13:12:26.364Z",
+            "program": "amx_muse",
+            "controller": "192.168.0.5",
+            "files": [
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\COMMIT_EDITMSG",
+                    "md5": "9add4f856728c140b9d29593797afe74"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\FETCH_HEAD",
+                    "md5": "f59146feb5933eb4cef3f03677572cae"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\index",
+                    "md5": "94e9b2dfebbe851f9e1391e0c0ce0c26"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "29d50a4b184ae9d36c853ea867a729b9"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\0a\\dfcb12fb93bf74f58be231b0f4863c7356f552",
+                    "md5": "981fbb7679e94523be6841c7a468391b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\60\\a8accf2f1db3706f7cc52fc6095afcf0afad40",
+                    "md5": "f2953309b607c217f1bf5f008c380190"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\61\\feb279a18a16cedf0ebe2329e4a18e79ecceba",
+                    "md5": "cdce89ddac29bc2a59043dd84af86418"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\9f\\f05883517cc72b580ecc5e4337ea24d115b495",
+                    "md5": "6a703f84771af05b7744f4ca23dbc49d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\b8\\65b69f904d642c8230088f3cfb646fd4c604b3",
+                    "md5": "368313a8836e4c5aa5cd5d2163d69b6b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.idx",
+                    "md5": "9185ba760028610a20b9ade65ab1826d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.pack",
+                    "md5": "ebab69c42f0ebfa3823273dde5044dc4"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.rev",
+                    "md5": "e9669bfda11e9740d03fea51165c5d4c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\packed-refs",
+                    "md5": "293264d28182e0c1bff37cf3893d6638"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "0f7d80c9724482c4ca1f32c2f148ed35"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.gitignore",
+                    "md5": "93913be8432821e061503889158ef814"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\drivers.py",
+                    "md5": "69fb3ecf5e900e49bc047f902137927f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\index.py",
+                    "md5": "d8de7773cb36f036efa0021eb0accd15"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-18T13:14:11.475Z",
+            "program": "amx_muse",
+            "controller": "192.168.0.5",
+            "files": [
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\COMMIT_EDITMSG",
+                    "md5": "9add4f856728c140b9d29593797afe74"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\FETCH_HEAD",
+                    "md5": "f59146feb5933eb4cef3f03677572cae"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\index",
+                    "md5": "94e9b2dfebbe851f9e1391e0c0ce0c26"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "29d50a4b184ae9d36c853ea867a729b9"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\0a\\dfcb12fb93bf74f58be231b0f4863c7356f552",
+                    "md5": "981fbb7679e94523be6841c7a468391b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\60\\a8accf2f1db3706f7cc52fc6095afcf0afad40",
+                    "md5": "f2953309b607c217f1bf5f008c380190"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\61\\feb279a18a16cedf0ebe2329e4a18e79ecceba",
+                    "md5": "cdce89ddac29bc2a59043dd84af86418"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\9f\\f05883517cc72b580ecc5e4337ea24d115b495",
+                    "md5": "6a703f84771af05b7744f4ca23dbc49d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\b8\\65b69f904d642c8230088f3cfb646fd4c604b3",
+                    "md5": "368313a8836e4c5aa5cd5d2163d69b6b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.idx",
+                    "md5": "9185ba760028610a20b9ade65ab1826d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.pack",
+                    "md5": "ebab69c42f0ebfa3823273dde5044dc4"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.rev",
+                    "md5": "e9669bfda11e9740d03fea51165c5d4c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\packed-refs",
+                    "md5": "293264d28182e0c1bff37cf3893d6638"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "0f7d80c9724482c4ca1f32c2f148ed35"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.gitignore",
+                    "md5": "93913be8432821e061503889158ef814"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\drivers.py",
+                    "md5": "69fb3ecf5e900e49bc047f902137927f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\index.py",
+                    "md5": "59783b34d3ed0cfec72b6121641425bb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-18T13:15:21.343Z",
+            "program": "amx_muse",
+            "controller": "192.168.0.5",
+            "files": [
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\COMMIT_EDITMSG",
+                    "md5": "9add4f856728c140b9d29593797afe74"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\FETCH_HEAD",
+                    "md5": "f59146feb5933eb4cef3f03677572cae"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\index",
+                    "md5": "94e9b2dfebbe851f9e1391e0c0ce0c26"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "29d50a4b184ae9d36c853ea867a729b9"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\0a\\dfcb12fb93bf74f58be231b0f4863c7356f552",
+                    "md5": "981fbb7679e94523be6841c7a468391b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\60\\a8accf2f1db3706f7cc52fc6095afcf0afad40",
+                    "md5": "f2953309b607c217f1bf5f008c380190"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\61\\feb279a18a16cedf0ebe2329e4a18e79ecceba",
+                    "md5": "cdce89ddac29bc2a59043dd84af86418"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\9f\\f05883517cc72b580ecc5e4337ea24d115b495",
+                    "md5": "6a703f84771af05b7744f4ca23dbc49d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\b8\\65b69f904d642c8230088f3cfb646fd4c604b3",
+                    "md5": "368313a8836e4c5aa5cd5d2163d69b6b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.idx",
+                    "md5": "9185ba760028610a20b9ade65ab1826d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.pack",
+                    "md5": "ebab69c42f0ebfa3823273dde5044dc4"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.rev",
+                    "md5": "e9669bfda11e9740d03fea51165c5d4c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\packed-refs",
+                    "md5": "293264d28182e0c1bff37cf3893d6638"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "0f7d80c9724482c4ca1f32c2f148ed35"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.gitignore",
+                    "md5": "93913be8432821e061503889158ef814"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\drivers.py",
+                    "md5": "69fb3ecf5e900e49bc047f902137927f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\index.py",
+                    "md5": "be7ccf52243c64fdbe343adde403cb23"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-18T13:17:49.569Z",
+            "program": "amx_muse",
+            "controller": "192.168.0.5",
+            "files": [
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\COMMIT_EDITMSG",
+                    "md5": "9add4f856728c140b9d29593797afe74"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\FETCH_HEAD",
+                    "md5": "f59146feb5933eb4cef3f03677572cae"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\index",
+                    "md5": "94e9b2dfebbe851f9e1391e0c0ce0c26"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "29d50a4b184ae9d36c853ea867a729b9"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\0a\\dfcb12fb93bf74f58be231b0f4863c7356f552",
+                    "md5": "981fbb7679e94523be6841c7a468391b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\60\\a8accf2f1db3706f7cc52fc6095afcf0afad40",
+                    "md5": "f2953309b607c217f1bf5f008c380190"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\61\\feb279a18a16cedf0ebe2329e4a18e79ecceba",
+                    "md5": "cdce89ddac29bc2a59043dd84af86418"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\9f\\f05883517cc72b580ecc5e4337ea24d115b495",
+                    "md5": "6a703f84771af05b7744f4ca23dbc49d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\b8\\65b69f904d642c8230088f3cfb646fd4c604b3",
+                    "md5": "368313a8836e4c5aa5cd5d2163d69b6b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.idx",
+                    "md5": "9185ba760028610a20b9ade65ab1826d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.pack",
+                    "md5": "ebab69c42f0ebfa3823273dde5044dc4"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.rev",
+                    "md5": "e9669bfda11e9740d03fea51165c5d4c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\packed-refs",
+                    "md5": "293264d28182e0c1bff37cf3893d6638"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "0f7d80c9724482c4ca1f32c2f148ed35"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.gitignore",
+                    "md5": "93913be8432821e061503889158ef814"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\drivers.py",
+                    "md5": "69fb3ecf5e900e49bc047f902137927f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\index.py",
+                    "md5": "8d35086293b3f2c0b94cdb92917f1627"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-18T13:20:44.465Z",
+            "program": "amx_muse",
+            "controller": "192.168.0.5",
+            "files": [
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\COMMIT_EDITMSG",
+                    "md5": "9add4f856728c140b9d29593797afe74"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\FETCH_HEAD",
+                    "md5": "f59146feb5933eb4cef3f03677572cae"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\index",
+                    "md5": "94e9b2dfebbe851f9e1391e0c0ce0c26"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "29d50a4b184ae9d36c853ea867a729b9"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\0a\\dfcb12fb93bf74f58be231b0f4863c7356f552",
+                    "md5": "981fbb7679e94523be6841c7a468391b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\60\\a8accf2f1db3706f7cc52fc6095afcf0afad40",
+                    "md5": "f2953309b607c217f1bf5f008c380190"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\61\\feb279a18a16cedf0ebe2329e4a18e79ecceba",
+                    "md5": "cdce89ddac29bc2a59043dd84af86418"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\9f\\f05883517cc72b580ecc5e4337ea24d115b495",
+                    "md5": "6a703f84771af05b7744f4ca23dbc49d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\b8\\65b69f904d642c8230088f3cfb646fd4c604b3",
+                    "md5": "368313a8836e4c5aa5cd5d2163d69b6b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.idx",
+                    "md5": "9185ba760028610a20b9ade65ab1826d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.pack",
+                    "md5": "ebab69c42f0ebfa3823273dde5044dc4"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.rev",
+                    "md5": "e9669bfda11e9740d03fea51165c5d4c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\packed-refs",
+                    "md5": "293264d28182e0c1bff37cf3893d6638"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "0f7d80c9724482c4ca1f32c2f148ed35"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.gitignore",
+                    "md5": "93913be8432821e061503889158ef814"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\drivers.py",
+                    "md5": "69fb3ecf5e900e49bc047f902137927f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\index.py",
+                    "md5": "8d35086293b3f2c0b94cdb92917f1627"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-18T13:22:18.890Z",
+            "program": "amx_muse",
+            "controller": "192.168.0.5",
+            "files": [
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\COMMIT_EDITMSG",
+                    "md5": "9add4f856728c140b9d29593797afe74"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\FETCH_HEAD",
+                    "md5": "f59146feb5933eb4cef3f03677572cae"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\index",
+                    "md5": "94e9b2dfebbe851f9e1391e0c0ce0c26"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "29d50a4b184ae9d36c853ea867a729b9"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\0a\\dfcb12fb93bf74f58be231b0f4863c7356f552",
+                    "md5": "981fbb7679e94523be6841c7a468391b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\60\\a8accf2f1db3706f7cc52fc6095afcf0afad40",
+                    "md5": "f2953309b607c217f1bf5f008c380190"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\61\\feb279a18a16cedf0ebe2329e4a18e79ecceba",
+                    "md5": "cdce89ddac29bc2a59043dd84af86418"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\9f\\f05883517cc72b580ecc5e4337ea24d115b495",
+                    "md5": "6a703f84771af05b7744f4ca23dbc49d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\b8\\65b69f904d642c8230088f3cfb646fd4c604b3",
+                    "md5": "368313a8836e4c5aa5cd5d2163d69b6b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.idx",
+                    "md5": "9185ba760028610a20b9ade65ab1826d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.pack",
+                    "md5": "ebab69c42f0ebfa3823273dde5044dc4"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.rev",
+                    "md5": "e9669bfda11e9740d03fea51165c5d4c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\packed-refs",
+                    "md5": "293264d28182e0c1bff37cf3893d6638"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "0f7d80c9724482c4ca1f32c2f148ed35"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.gitignore",
+                    "md5": "93913be8432821e061503889158ef814"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\drivers.py",
+                    "md5": "69fb3ecf5e900e49bc047f902137927f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\index.py",
+                    "md5": "92a04407176197a71fc6dfad89a1cecf"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-18T13:24:03.002Z",
+            "program": "amx_muse",
+            "controller": "192.168.0.5",
+            "files": [
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\COMMIT_EDITMSG",
+                    "md5": "9add4f856728c140b9d29593797afe74"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\FETCH_HEAD",
+                    "md5": "f59146feb5933eb4cef3f03677572cae"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\index",
+                    "md5": "94e9b2dfebbe851f9e1391e0c0ce0c26"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "29d50a4b184ae9d36c853ea867a729b9"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\0a\\dfcb12fb93bf74f58be231b0f4863c7356f552",
+                    "md5": "981fbb7679e94523be6841c7a468391b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\60\\a8accf2f1db3706f7cc52fc6095afcf0afad40",
+                    "md5": "f2953309b607c217f1bf5f008c380190"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\61\\feb279a18a16cedf0ebe2329e4a18e79ecceba",
+                    "md5": "cdce89ddac29bc2a59043dd84af86418"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\9f\\f05883517cc72b580ecc5e4337ea24d115b495",
+                    "md5": "6a703f84771af05b7744f4ca23dbc49d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\b8\\65b69f904d642c8230088f3cfb646fd4c604b3",
+                    "md5": "368313a8836e4c5aa5cd5d2163d69b6b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.idx",
+                    "md5": "9185ba760028610a20b9ade65ab1826d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.pack",
+                    "md5": "ebab69c42f0ebfa3823273dde5044dc4"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.rev",
+                    "md5": "e9669bfda11e9740d03fea51165c5d4c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\packed-refs",
+                    "md5": "293264d28182e0c1bff37cf3893d6638"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "0f7d80c9724482c4ca1f32c2f148ed35"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.gitignore",
+                    "md5": "93913be8432821e061503889158ef814"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\drivers.py",
+                    "md5": "69fb3ecf5e900e49bc047f902137927f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\index.py",
+                    "md5": "70c9508db441deae7004b09e1fa882f8"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-18T13:34:30.870Z",
+            "program": "amx_muse",
+            "controller": "192.168.0.5",
+            "files": [
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.coverage",
+                    "md5": "109783fbbd6fceaa073ba945fdc2102f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\COMMIT_EDITMSG",
+                    "md5": "9add4f856728c140b9d29593797afe74"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\config",
+                    "md5": "fcf56b3dd731e801fea69f568825651d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\description",
+                    "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\FETCH_HEAD",
+                    "md5": "f59146feb5933eb4cef3f03677572cae"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\HEAD",
+                    "md5": "cf7dd3ce51958c5f13fece957cc417fb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\applypatch-msg.sample",
+                    "md5": "ce562e08d8098926a3862fc6e7905199"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\commit-msg.sample",
+                    "md5": "579a3c1e12a1e74a98169175fb913012"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\fsmonitor-watchman.sample",
+                    "md5": "a0b2633a2c8e97501610bd3f73da66fc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\post-update.sample",
+                    "md5": "2b7ea5cee3c49ff53d41e00785eb974c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-applypatch.sample",
+                    "md5": "054f9ffb8bfe04a599751cc757226dda"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-commit.sample",
+                    "md5": "5029bfab85b1c39281aa9697379ea444"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-merge-commit.sample",
+                    "md5": "39cb268e2a85d436b9eb6f47614c3cbc"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-push.sample",
+                    "md5": "2c642152299a94e05ea26eae11993b13"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-rebase.sample",
+                    "md5": "56e45f2bcbc8226d2b4200f7c46371bf"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\pre-receive.sample",
+                    "md5": "2ad18ec82c20af7b5926ed9cea6aeedd"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\prepare-commit-msg.sample",
+                    "md5": "2b5c047bdb474555e1787db32b2d2fc5"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\push-to-checkout.sample",
+                    "md5": "c7ab00c7784efeadad3ae9b228d4b4db"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\sendemail-validate.sample",
+                    "md5": "4d67df3a8d5c98cb8565c07e42be0b04"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\hooks\\update.sample",
+                    "md5": "647ae13c682f7827c22f5fc08a03674e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\index",
+                    "md5": "94e9b2dfebbe851f9e1391e0c0ce0c26"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\info\\exclude",
+                    "md5": "036208b4a1ab4a235d75c181e685e5a3"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\HEAD",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\heads\\main",
+                    "md5": "1702144a7bccf20145971585790f46aa"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+                    "md5": "29d50a4b184ae9d36c853ea867a729b9"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\0a\\dfcb12fb93bf74f58be231b0f4863c7356f552",
+                    "md5": "981fbb7679e94523be6841c7a468391b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\60\\a8accf2f1db3706f7cc52fc6095afcf0afad40",
+                    "md5": "f2953309b607c217f1bf5f008c380190"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\61\\feb279a18a16cedf0ebe2329e4a18e79ecceba",
+                    "md5": "cdce89ddac29bc2a59043dd84af86418"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\9f\\f05883517cc72b580ecc5e4337ea24d115b495",
+                    "md5": "6a703f84771af05b7744f4ca23dbc49d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\b8\\65b69f904d642c8230088f3cfb646fd4c604b3",
+                    "md5": "368313a8836e4c5aa5cd5d2163d69b6b"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.idx",
+                    "md5": "9185ba760028610a20b9ade65ab1826d"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.pack",
+                    "md5": "ebab69c42f0ebfa3823273dde5044dc4"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\objects\\pack\\pack-23ee91c83065b51d49b3d4d07ab3b2e423ab8bdb.rev",
+                    "md5": "e9669bfda11e9740d03fea51165c5d4c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\packed-refs",
+                    "md5": "293264d28182e0c1bff37cf3893d6638"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\heads\\main",
+                    "md5": "0f7d80c9724482c4ca1f32c2f148ed35"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.git\\refs\\remotes\\origin\\HEAD",
+                    "md5": "98b16e0b650190870f1b40bc8f4aec4e"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.gitignore",
+                    "md5": "93913be8432821e061503889158ef814"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\.uploadignore",
+                    "md5": "eb02711926751047d40a017e0c204613"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\drivers.py",
+                    "md5": "69fb3ecf5e900e49bc047f902137927f"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\index.py",
+                    "md5": "d8de7773cb36f036efa0021eb0accd15"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\program.json",
+                    "md5": "a499e665ba6f51adb58debafe62f105a"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\README.md",
+                    "md5": "d87c7fe4fc67dc55aecc16badb0bdbef"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\test.py",
+                    "md5": "b2d73bb73a127ee7b5b634dd99784ecb"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-310.pyc",
+                    "md5": "88e46639bd907719cebe5f9f0077b933"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\drivers.cpython-312.pyc",
+                    "md5": "c383dbf81829a08aa60a3d9a40d14ba1"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-310.pyc",
+                    "md5": "1974828dba428765cc776c4a140cb165"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-311.pyc",
+                    "md5": "1f5fdccb90572afccd597c9a103889e0"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\index.cpython-312.pyc",
+                    "md5": "c899f7a38c314718f513b3fd6ba18c1c"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-310.pyc",
+                    "md5": "b9c444bb6e4d07bede0d312f87db4928"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-311.pyc",
+                    "md5": "5b8c5bf3ccabf8a1dac560befe35f4ff"
+                },
+                {
+                    "path": "c:\\Users\\isu_nhilber\\VSCodeWorkspace\\amx_muse\\__pycache__\\test.cpython-312.pyc",
+                    "md5": "593fa450f8cdeb9f42746e6ff11fc46e"
+                }
+            ]
         }
     ]
 }

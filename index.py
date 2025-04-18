@@ -2,7 +2,10 @@ from mojo import context
 import drivers
 import asyncio
 
-devices = {}
+rooms = {}
+uis = {}
+displays = {}
+switchers = {}
 
 # create a listener for display feedback
 def get_display_listener(ui, display):
