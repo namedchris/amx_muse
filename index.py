@@ -1,11 +1,33 @@
 from mojo import context
 import drivers
-import asyncio
 
-rooms = {}
-uis = {}
-displays = {}
-switchers = {}
+
+class DeviceRecord:
+    def __init__(self,device_id,device):
+        self.device_id = device_id
+        self.device = device
+        self.kind = device_id.split("-")[3]
+        match self.kind:
+            case "switcher":
+                self.driver = drivers.ExtronDriver(device_id, device)
+            case "touchpad":
+                self.driver = drivers.TouchpadDriver(device_id, device)
+            case "keypad":
+                self.driver =  drivers.KeyPadDriver(device_id, device)
+            case "monitor":
+                self.driver = drivers.LGDriver(device_id, device)
+            case "projector":
+                self.driver = drivers.EpsonDriver(device_id,device)
+
+
+class DeviceRegistry:
+    def __init__(self, devices):
+        self.devices = []
+        self.displays = []
+        self.uis = {}
+        self.displays = {}
+
+
 
 # create a listener for display feedback
 def get_display_listener(ui, display):
@@ -80,9 +102,7 @@ def populate_switchers(device_ids):
     for device_id in device_ids:
         muse_device = context.devices.get(device_id)
         room_name = parse_device_id(device_id)
-        if "switcher" not in device_id:
-            return switchers
-        if device_id not in switchers.values():
+        if "switcher" in device_id:
             switchers[room_name] = drivers.ExtronDriver(device_id,muse_device)
     return switchers
 
@@ -118,8 +138,10 @@ def setup_rooms(event=None):
     device_ids = prune_devices(
         list(context.devices.ids()), ("franky", "led", "idevice")
     )
-    global devices
-    devices = populate_rooms(device_ids)
+    rooms = populate_rooms(device_ids)
+    switchers = populate_switchers(device_ids)
+    displays = populate_displays(device_ids)
+    uis = populate_uis(device_ids)
     for room in rooms:
         print(f"setting up room {room}")
         if room in displays:
@@ -177,18 +199,20 @@ def setup_rooms(event=None):
             switchers[room].device.receive.listen(
                 get_switcher_listener(uis[room], switchers[room])
             )
-
-def device_listener(tlEvent):
-    setup_rooms()
-
-tick = context.services.get("timeline") 
-tick.start([10000],True,-1) 
+    
+async def setup_new_rooms():
+    while True:
+        setup_rooms()
+        await(30)
 
 # get controller context
 muse = context.devices.get("idevice")
 print("starting script")
 # setup rooms when controller comes online
-tick.expired.listen(device_listener)
 muse.online(setup_rooms)
+try:
+    device_detection_loop_task = asyncio.create_task(setup_new_rooms)
+except asyncio.CancelledError:
+    raise
 print("script complete")
 
