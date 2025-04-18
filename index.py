@@ -6,7 +6,10 @@ class DeviceRecord:
     def __init__(self,device_id,muse_device):
         self.device_id = device_id
         self.muse_device = muse_device
+
+    
         self.kind = device_id.split("-")[3]
+
         match self.kind:
             case "switcher":
                 self.driver = drivers.ExtronDriver(device_id, muse_device)
@@ -24,34 +27,62 @@ class DeviceRecord:
 
 class DeviceRegistry:
     def __init__(self):
-        self.devices_records = set()
+        self.device_records = set()
     
-    # update registry with a list of muse devices
-    def update(self, devices):
-        current_device_ids = set(device.device_id for device in devices)  # Get device_ids from the new list
-        
-        # Remove devices that are no longer in the framework's list
+    # update registry with a list of muse device id
+    def update(self, muse_device_ids):
+
+        muse_device_ids = set(muse_device_ids)
+        current_device_ids = set(device_record.device_id for device_record in self.device_records)  # Get device_ids from the new list
+       
+        # Remove devices that are no longer defined in muse
+        dropped_devices = set()
         for record in list(self.device_records):
             if record.device_id not in current_device_ids:
-                self.device_records.remove(record)  # Remove dropped devices
+                dropped_devices.add(record)
+        self.device_records = self.device_records - dropped_devices        
+       
+        # Add new device records
+        new_device_ids = muse_device_ids - current_device_ids
+        new_device_records = set()
 
-        # Add new devices or update existing ones
-        for device in devices:
-            new_record = DeviceRecord(device.device_id, device)
-            if new_record not in self.device_records:
-                self.device_records.add(new_record)  # Add new DeviceRecord
-
+        for device_id in new_device_ids:
+            muse_device = context.devices.get(device_id)
+            new_record = DeviceRecord(device_id, muse_device)
+            new_device_records.add(new_record)  # Add new DeviceRecord
+        self.device_records = self.device_records | new_device_records
+        
     def get_display_records(self):
         return [record for record in self.device_records if record.kind in ("monitor","projector")]
     
     def get_ui_records(self):
-        return [record for record in self.device_records if record.kind in ("keypad","touchpadr")]
+        return [record for record in self.device_records if record.kind in ("keypad","touchpad")]
     
     def get_switcher_records(self):
         return [record for record in self.device_records if record.kind == "switcher"]
-
+    
+    def get_rooms(self):
+        return {record.room for record in self.device_records}
+    
+    #Return the next record of that type for the given room
+    def get_display_record_by_room(self,room):
+        #displays = self.get_display_records()
+        #print(f"{displays=}")
+        #for display in displays:
+        #    print(f"{display.room} and {room}")
+        #    if display.room == room:
+        #        return display
+        return next(iter(r for r in self.device_records if (r.room == room) and r.kind in ("monitor","projector")), None)
+    
+    def get_ui_record_by_room(self,room):
+        return next(iter(r for r in self.device_records if (r.room == room) and r.kind in ("keypad","touchpad")), None)
+    
+    def get_switcher_record_by_room(self,room):
+        return next(iter(r for r in self.device_records if (r.room == room) and (r.kind == "switcher")), None)
+    
 # create a listener for display feedback
 def get_display_listener(ui, display):
+    print("inside display listener")#!
     def listener(event):
         nonlocal ui, display
         try:
@@ -75,6 +106,7 @@ def get_display_listener(ui, display):
 
 # create a listener for switchers
 def get_switcher_listener(ui, switcher):
+    print("inside switcher listener")#!
     def listener(event):
         nonlocal ui, switcher
         try:
@@ -109,84 +141,87 @@ def setup_rooms(event=None):
     device_ids = prune_devices(
         list(context.devices.ids()), ("franky", "led", "idevice")
     )
-    muse_devices = [context.devices.get(device_id) for device_id in device_ids if context.devices.get(device_id) is not None]
+
     device_registry = DeviceRegistry()
-    device_registry.update(muse_devices)
-    rooms = populate_rooms(device_ids)
-    switchers = populate_switchers(device_ids)
-    displays = populate_displays(device_ids)
-    uis = populate_uis(device_ids)
-    for room in rooms:
+    device_registry.update(device_ids)
+    print(f"{device_registry=}")#!
+    switchers = device_registry.get_switcher_records()
+    uis = device_registry.get_ui_records()
+    displays = device_registry.get_display_records()
+
+    for room in device_registry.get_rooms():
         print(f"setting up room {room}")
-        if room in displays:
-            display = displays[room]
-        if room in switchers:
-            switcher = switchers[room]
-        # setup button watchers for room
-        if "touchpad" in uis[room].device_id:
-            buttons = {
-                # muse listeners must accept an event argument. event.value tells you if the you are handling a press or release
-                # executes function on push, executes noop on release
-                "port/1/button/9": lambda event: (
-                    display.toggle_power() if event.value else None
-                ),
-                "port/1/button/210": lambda event: (
-                    display.toggle_pic_mute() if event.value else None
-                ),
-                "port/1/button/24": lambda event: (
-                    switcher.start_volume_ramp_up()
-                    if event.value
-                    else switcher.stop_volume_ramp_up()
-                ),
-                "port/1/button/25": lambda event: (
-                    switcher.start_volume_ramp_down()
-                    if event.value
-                    else switcher.stop_volume_ramp_down()
-                ),
-                "port/1/button/26": lambda event: (
-                    switcher.toggle_vol_mute() if event.value else None
-                ),
-                "port/1/button/31": lambda event: (
-                    switcher.select_source_three() if event.value else None
-                ),
-                "port/1/button/32": lambda event: (
-                    switcher.select_source_four() if event.value else None
-                ),
-                "port/1/button/33": lambda event: (
-                    switcher.select_source_six() if event.value else None
-                ),
-            }
-            print(f"Buttons configured for {uis[room].device_id}")
-        # register watchers
-        for key, action in buttons.items():
-            port = int(key.split("/")[1])
-            id = int(key.split("/")[3])
-            uis[room].device.port[port].button[id].watch(action)
-            print(f"Button watchers registered for {uis[room].device_id}")
+        device_records = [device for device in device_registry.device_records if device.room==room]
+        print(f"{device_records=}")#!
+        for device_record in device_records:
+            # setup button watchers for room
+            display = device_registry.get_display_record_by_room(room)
+            switcher = device_registry.get_switcher_record_by_room(room)
+            print(f"{display=} and {switcher=}")
+            if not display or not switcher:
+                continue
+            if device_record.kind == "touchpad":
+                print("setting up room")#!
+                buttons = {
+                    # muse listeners must accept an event argument. event.value tells you if the you are handling a press or release
+                    # executes function on push, executes noop on release
+                    "port/1/button/9": lambda event: (
+                        display.toggle_power() if event.value else None
+                    ),
+                    "port/1/button/210": lambda event: (
+                        display.toggle_pic_mute() if event.value else None
+                    ),
+                    "port/1/button/24": lambda event: (
+                        switcher.start_volume_ramp_up()
+                        if event.value
+                        else switcher.stop_volume_ramp_up()
+                    ),
+                    "port/1/button/25": lambda event: (
+                        switcher.start_volume_ramp_down()
+                        if event.value
+                        else switcher.stop_volume_ramp_down()
+                    ),
+                    "port/1/button/26": lambda event: (
+                        switcher.toggle_vol_mute() if event.value else None
+                    ),
+                    "port/1/button/31": lambda event: (
+                        switcher.select_source_three() if event.value else None
+                    ),
+                    "port/1/button/32": lambda event: (
+                        switcher.select_source_four() if event.value else None
+                    ),
+                    "port/1/button/33": lambda event: (
+                        switcher.select_source_six() if event.value else None
+                    ),
+                }
+                print(f"Buttons configured for {uis[room].device_id}")
+                # register watchers
+                for key, action in buttons.items():
+                    port = int(key.split("/")[1])
+                    id = int(key.split("/")[3])
+                    uis[room].device.port[port].button[id].watch(action)
+                    print(f"Button watchers registered for {uis[room].device_id}")
 
         # register feedback listeners with muse devicesa
         if room in displays:
+            print("room is in displays")#!
             displays[room].device.receive.listen(
                 get_display_listener(uis[room], displays[room])
             )
-        if room in switchers:    
+        if room in switchers: 
+            print("room is in switchers")#!
             switchers[room].device.receive.listen(
                 get_switcher_listener(uis[room], switchers[room])
             )
-    
-async def setup_new_rooms():
-    while True:
-        setup_rooms()
-        await(30)
+
+tick = context.services.get("timeline") 
+tick.start([10000],True,-1) 
 
 # get controller context
 muse = context.devices.get("idevice")
 print("starting script")
 # setup rooms when controller comes online
 muse.online(setup_rooms)
-try:
-    device_detection_loop_task = asyncio.create_task(setup_new_rooms)
-except asyncio.CancelledError:
-    raise
+
 print("script complete")
 
