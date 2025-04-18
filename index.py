@@ -22,7 +22,6 @@ class DeviceRecord:
         self.room = "-".join(split_id[:2])
 
 
-
 class DeviceRegistry:
     def __init__(self):
         self.devices_records = set()
@@ -72,7 +71,7 @@ def get_display_listener(ui, display):
             # TODO implement keypad support
             pass
 
-    return listener
+    return listenergit 
 
 
 # create a listener for switchers
@@ -95,13 +94,6 @@ def get_switcher_listener(ui, switcher):
             pass
 
     return listener
-
-
-# parse a device ID to get room name
-def parse_device_id(device_id):
-    split_id = device_id.split("-")
-    room_name = "-".join(split_id[:2])
-    return room_name
 
 
 # remove built-in muse devices and return a set of rooms
