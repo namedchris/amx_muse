@@ -36,6 +36,7 @@ class LGDriver:
     PIC_MUTE_OFF_ACK = "d 01 OK00x"
     # errors
     POWER_ON_ERROR = "a 01 NG01x" #returned when powered on monitor is asked to power on
+    POWER_OFF_ERROR = "a 01 NG00x" #returned when powered on monitor is asked to power off
 
     def __init__(self, device_id, device):
         self.device_id = device_id
@@ -56,6 +57,7 @@ class LGDriver:
             lines.append(line)
         for line in lines:
             print(f"{line=}")
+
             match line:
                 case self.POWER_OFF_ACK:
                     self.power_is_on = False
@@ -90,9 +92,7 @@ class LGDriver:
 
 
 class ExtronDriver:
-
-    SWITCHER_PASSWORD = "changeme"
-
+    
     SOURCE_THREE_COMMAND = "3!\r"
     SOURCE_FOUR_COMMAND = "4!\r"
     SOURCE_SIX_COMMAND = "6!\r"
@@ -128,9 +128,10 @@ class ExtronDriver:
         return normalized_volume    
 
     def update_state(self, feedback):
+        print(f"{feedback=}")#!
         lines = feedback.split("\r\n")
+        print(f"{lines=}")#!
         for line in lines:
-            print(line)
             if line.startswith("In03 All"):
                     self.input_three_is_active, self.input_four_is_active, self.input_six_is_active = (
                         True,
@@ -149,13 +150,14 @@ class ExtronDriver:
                         False,
                         True,
                     )
-            if line.startswith("GrpmD2"):
-                self.volume_is_muted = False if (line.split("*")[1]) == '0' else True
-            elif line.startswith("GrpmD1"):
-                self.volume_level = int(line.split("*")[1])
+            if "GrpmD2" in line:
+                print("Inside GrpmD2")#!
+                self.volume_is_muted = False if (line.split("*")[1][0]) == '0' else True
+                print(f"GRPMD2 {self.volume_is_muted=}")
+            elif "GrpmD1" in line:
+                print("Inside GrpmD1")#!
+                self.volume_level = int(line.split("*")[1].strip())
                 print(f"{self.volume_level=}")
-            elif line.startswith("Password:"):
-                self.device.send(f"{self.SWITCHER_PASSWORD}\r")
            
 
     def ramp_volume_up(self):
@@ -221,11 +223,11 @@ class TouchpadDriver:
     def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device
+        self.set_label()
 
-    def set_label():
-        room,number,type,index = device_id.split("-")
-        room_name - room + number
-        device.send_command("'^TXT-201,0,', room_name")    
+    def set_label(self):
+        room,number,type,index = self.device_id.split("-")
+        self.device.port[1].send_command(f"^TXT-201,0,{room.upper()}-{number}")   
     
 class KeyPadDriver:
 
