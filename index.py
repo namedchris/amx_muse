@@ -71,7 +71,6 @@ def get_display_listener(ui, display):
             # TODO implement keypad support
             pass
 
-    return listenergit 
 
 
 # create a listener for switchers
@@ -110,6 +109,9 @@ def setup_rooms(event=None):
     device_ids = prune_devices(
         list(context.devices.ids()), ("franky", "led", "idevice")
     )
+    muse_devices = [context.devices.get(device_id) for device_id in device_ids if context.devices.get(device_id) is not None]
+    device_registry = DeviceRegistry()
+    device_registry.update(muse_devices)
     rooms = populate_rooms(device_ids)
     switchers = populate_switchers(device_ids)
     displays = populate_displays(device_ids)
