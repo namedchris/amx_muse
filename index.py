@@ -103,48 +103,6 @@ def prune_devices(devices, prunings):
     return devices - prunings
 
 
-# parse device IDs to make a set of rooms
-def populate_rooms(devices):
-    rooms = []
-    for device_id in devices:
-        rooms.append(parse_device_id(device_id))
-    return set(rooms)
-
-
-def populate_switchers(device_ids):
-    switchers = {}
-    for device_id in device_ids:
-        muse_device = context.devices.get(device_id)
-        room_name = parse_device_id(device_id)
-        if "switcher" in device_id:
-            switchers[room_name] = drivers.ExtronDriver(device_id,muse_device)
-    return switchers
-
-
-def populate_displays(device_ids):
-    displays = {}
-    for device_id in device_ids:
-        muse_device = context.devices.get(device_id)
-        room_name = parse_device_id(device_id)
-        if "monitor" in device_id:
-            displays[room_name] = drivers.LGDriver(device_id, muse_device)
-        elif "projector" in device_id:
-            # TODO add projector support
-            pass
-    return displays
-
-
-def populate_uis(device_ids):
-    uis = {}
-    for device_id in device_ids:
-        muse_device = context.devices.get(device_id)
-        room_name = parse_device_id(device_id)
-        if "keypad" in device_id:
-            uis[room_name] = drivers.KeypadDriver(device_id, muse_device)
-        elif "touchpad" in device_id:
-            uis[room_name] = drivers.TouchpadDriver(device_id,muse_device)
-    return uis
-
 
 # populate the lists and dictionaries; create and register watchers and listeners
 def setup_rooms(event=None):
