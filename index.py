@@ -3,31 +3,53 @@ import drivers
 
 
 class DeviceRecord:
-    def __init__(self,device_id,device):
+    def __init__(self,device_id,muse_device):
         self.device_id = device_id
-        self.device = device
+        self.muse_device = muse_device
         self.kind = device_id.split("-")[3]
         match self.kind:
             case "switcher":
-                self.driver = drivers.ExtronDriver(device_id, device)
+                self.driver = drivers.ExtronDriver(device_id, muse_device)
             case "touchpad":
-                self.driver = drivers.TouchpadDriver(device_id, device)
+                self.driver = drivers.TouchpadDriver(device_id, muse_device)
             case "keypad":
-                self.driver =  drivers.KeyPadDriver(device_id, device)
+                self.driver =  drivers.KeyPadDriver(device_id, muse_device)
             case "monitor":
-                self.driver = drivers.LGDriver(device_id, device)
+                self.driver = drivers.LGDriver(device_id, muse_device)
             case "projector":
-                self.driver = drivers.EpsonDriver(device_id,device)
+                self.driver = drivers.EpsonDriver(device_id,muse_device)
+        split_id = device_id.split("-")
+        self.room = "-".join(split_id[:2])
+
 
 
 class DeviceRegistry:
-    def __init__(self, devices):
-        self.devices = []
-        self.displays = []
-        self.uis = {}
-        self.displays = {}
+    def __init__(self):
+        self.devices_records = set()
+    
+    # update registry with a list of muse devices
+    def update(self, devices):
+        current_device_ids = set(device.device_id for device in devices)  # Get device_ids from the new list
+        
+        # Remove devices that are no longer in the framework's list
+        for record in list(self.device_records):
+            if record.device_id not in current_device_ids:
+                self.device_records.remove(record)  # Remove dropped devices
 
+        # Add new devices or update existing ones
+        for device in devices:
+            new_record = DeviceRecord(device.device_id, device)
+            if new_record not in self.device_records:
+                self.device_records.add(new_record)  # Add new DeviceRecord
 
+    def get_display_records(self):
+        return [record for record in self.device_records if record.kind in ("monitor","projector")]
+    
+    def get_ui_records(self):
+        return [record for record in self.device_records if record.kind in ("keypad","touchpadr")]
+    
+    def get_switcher_records(self):
+        return [record for record in self.device_records if record.kind == "switcher"]
 
 # create a listener for display feedback
 def get_display_listener(ui, display):
