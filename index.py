@@ -23,11 +23,11 @@ class DeviceRecord:
         self.room = "-".join(split_id[:2])
         print(vars(self))#!
 
-    def __eq__(self, other_device_id):
-        if(self.device_id == other_device_id):
-            return True
-        else:
-            return False
+    #def __eq__(self, other_device_id):
+    #    if(self.device_id == other_device_id):
+    #        return True
+    #    else:
+    #        return False
         
 class DeviceRegistry:
     def __init__(self):
@@ -87,6 +87,7 @@ class DeviceRegistry:
 def get_display_listener(ui, display):
     print("inside display listener")#!
     def listener(event):
+        print("inside nested display listener")#!
         nonlocal ui, display
         try:
             data = str(event.arguments["data"].decode())
@@ -110,6 +111,7 @@ def get_display_listener(ui, display):
 def get_switcher_listener(ui, switcher):
     print("inside switcher listener")#!
     def listener(event):
+        print("inside nested switcher listener")#!
         nonlocal ui, switcher
         try:
             data = str(event.arguments["data"].decode())
@@ -159,7 +161,7 @@ def setup_rooms(event=None):
             display_record = device_registry.get_display_record_by_room(room)
             switcher_record = device_registry.get_switcher_record_by_room(room)
             ui_record = device_registry.get_ui_record_by_room(room)
-            print(f"Line 160: {display_record=} and {switcher_record=}")#!
+            print(f"Line 164: {display_record.device_id=} and {switcher_record.device_id=}")#!
             if not display_record or not switcher_record:
                 continue
             if device_record.kind == "touchpad":
