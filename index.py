@@ -23,11 +23,6 @@ class DeviceRecord:
         self.room = "-".join(split_id[:2])
         print(vars(self))#!
 
-    #def __eq__(self, other_device_id):
-    #    if(self.device_id == other_device_id):
-    #        return True
-    #    else:
-    #        return False
         
 class DeviceRegistry:
     def __init__(self):
@@ -85,7 +80,7 @@ class DeviceRegistry:
     
 # create a listener for display feedback
 def get_display_listener(ui, display):
-    print("inside display listener")#!
+    print("inside get display listener")#!
     def listener(event):
         print("inside nested display listener")#!
         nonlocal ui, display
@@ -96,6 +91,7 @@ def get_display_listener(ui, display):
         # update driver state
         display.recv_buffer += data
         display.update_state()
+        print(F"Event on display: {data}")
         if "touchpad" in ui.device_id:
             # update button state
             power_button = ui.device.port[1].channel[9]
@@ -109,7 +105,7 @@ def get_display_listener(ui, display):
 
 # create a listener for switchers
 def get_switcher_listener(ui, switcher):
-    print("inside switcher listener")#!
+    print("inside get switcher listener")#!
     def listener(event):
         print("inside nested switcher listener")#!
         nonlocal ui, switcher
@@ -117,6 +113,7 @@ def get_switcher_listener(ui, switcher):
             data = str(event.arguments["data"].decode())
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
+        print(F"Event on switcher: {data}")
         switcher.update_state(data)
         if "touchpad" in ui.device_id:
             ui.device.port[1].channel[31] = switcher.input_three_is_active
