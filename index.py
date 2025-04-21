@@ -204,7 +204,7 @@ def setup_rooms(event=None):
                     port = int(key.split("/")[1])
                     id = int(key.split("/")[3])
                     ui_record.muse_device.device.port[port].button[id].watch(action)
-                    print(f"Button watchers registered for {room}")
+                print(f"Button watchers registered for {room}")
 
             # register feedback listeners with muse devices
             display_record.muse_device.device.receive.listen(
