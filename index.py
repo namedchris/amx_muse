@@ -66,7 +66,9 @@ class DeviceRegistry:
         return [record for record in self.device_records if record.kind == "switcher"]
     
     def get_rooms(self):
-        return {record.room for record in self.device_records}
+        rooms = {record.room for record in self.device_records}
+        print(f"Current {rooms=}")
+        return rooms
     
     #Return the next record of that type for the given room
     def get_display_record_by_room(self,room):
@@ -141,7 +143,6 @@ def setup_rooms(event=None):
     device_ids = prune_devices(
         list(context.devices.ids()), ("franky", "led", "idevice")
     )
-
     device_registry = DeviceRegistry()
     device_registry.update(device_ids)
     print(f"{device_registry=}")#!
