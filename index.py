@@ -160,7 +160,7 @@ def setup_rooms(event=None):
             if not display_record or not switcher_record:
                 continue
             if device_record.kind == "touchpad":
-                print("setting up room")#!
+                print("Setting up buttons for {ui_record.device_id}")#!
                 buttons = {
                     # muse listeners must accept an event argument. event.value tells you if the you are handling a press or release
                     # executes function on push, executes noop on release
@@ -199,7 +199,7 @@ def setup_rooms(event=None):
                     port = int(key.split("/")[1])
                     id = int(key.split("/")[3])
                     ui_record.muse_device.device.port[port].button[id].watch(action)
-                    print("Adding button watcher for ")
+                    print(f"Adding button watcher for {port=} and {id=}")
                 print(f"Button watchers registered for {room}")
 
             # register feedback listeners with muse devices
