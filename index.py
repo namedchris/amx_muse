@@ -75,8 +75,9 @@ class DeviceRegistry:
         return next(iter(r for r in self.device_records if (r.room == room) and r.kind in ("monitor","projector")), None)
     
     def get_ui_record_by_room(self,room):
-        return next(iter(r for r in self.device_records if (r.room == room) and r.kind in ("keypad","touchpad")), None)
-    
+        room_record = next(iter(r for r in self.device_records if (r.room == room) and r.kind in ("keypad","touchpad")), None)
+        print(f"fetched room record: {room_record.id}")
+        return room
     def get_switcher_record_by_room(self,room):
         return next(iter(r for r in self.device_records if (r.room == room) and (r.kind == "switcher")), None)
     
