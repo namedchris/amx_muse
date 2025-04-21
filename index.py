@@ -76,8 +76,9 @@ class DeviceRegistry:
     
     def get_ui_record_by_room(self,room):
         room_record = next(iter(r for r in self.device_records if (r.room == room) and r.kind in ("keypad","touchpad")), None)
-        print(f"fetched room record: {room_record.id}")
-        return room
+        print(f"fetching room record: {room_record.device_id}")
+        return room_record
+    
     def get_switcher_record_by_room(self,room):
         return next(iter(r for r in self.device_records if (r.room == room) and (r.kind == "switcher")), None)
     
@@ -156,7 +157,7 @@ def setup_rooms(event=None):
             display_record = device_registry.get_display_record_by_room(room)
             switcher_record = device_registry.get_switcher_record_by_room(room)
             ui_record = device_registry.get_ui_record_by_room(room)
-            print(f"Line 164: {display_record.device_id=} and {switcher_record.device_id=}")#!
+            print(f"Line 164:\n    {display_record.device_id=}\n    {switcher_record.device_id=}\n    {ui_record.device_id=}")#!
             # skip this room if it is missing a switcher or display
             if not display_record or not switcher_record:
                 continue
