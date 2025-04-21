@@ -1,7 +1,7 @@
 from mojo import context
 import drivers
 
-
+device_registry = None
 class DeviceRecord:
     def __init__(self,device_id,muse_device):
         self.device_id = device_id
@@ -42,7 +42,7 @@ class DeviceRegistry:
                 dropped_device_ids.add(device_id)
         # make a set if record that need removed from the registry
         dropped_device_records = {record for record in self.device_records if record.device_id in dropped_device_ids}
-        self.device_registry = self.device_records - dropped_device_records        
+        self.device_records = self.device_records - dropped_device_records#!        
 
         # get ids for all records
         current_device_ids = set(device_record.device_id for device_record in self.device_records)  # Get device_ids from the new list
@@ -76,58 +76,62 @@ class DeviceRegistry:
     
     def get_ui_record_by_room(self,room):
         room_record = next(iter(r for r in self.device_records if (r.room == room) and r.kind in ("keypad","touchpad")), None)
-        print(f"fetching room record: {room_record.device_id}")
         return room_record
     
     def get_switcher_record_by_room(self,room):
         return next(iter(r for r in self.device_records if (r.room == room) and (r.kind == "switcher")), None)
     
 # create a listener for display feedback
-def get_display_listener(ui, display):
+def get_display_listener(ui_record, display_driver):
     print("inside get display listener")#!
     def listener(event):
         print("inside nested display listener")#!
-        nonlocal ui, display
+        nonlocal ui_record, display_driver
         try:
+            print(data)
             data = str(event.arguments["data"].decode())
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
         # update driver state
-        display.recv_buffer += data
-        display.update_state()
+        display_driver.recv_buffer += data
+        display_driver.update_state()
         print(F"Event on display: {data}")
-        if "touchpad" in ui.device_id:
+        if "touchpad" in ui_record.device_id:
             # update button state
-            power_button = ui.device.port[1].channel[9]
-            pic_mute_button = ui.device.port[1].channel[210]
-            power_button.value = display.power_is_on
-            pic_mute_button.value = display.pic_mute_is_on
-        elif "keypad" in ui.device_id:
+            power_button = ui_record.device.port[1].channel[9]
+            pic_mute_button = ui_record.device.port[1].channel[210]
+            power_button.value = display_driver.power_is_on
+            pic_mute_button.value = display_driver.pic_mute_is_on
+        elif "keypad" in ui_record.device_id:
             # TODO implement keypad support
             pass
     return listener
 
 # create a listener for switchers
-def get_switcher_listener(ui, switcher):
+def get_switcher_listener(ui_record, switcher_driver):
     print("inside get switcher listener")#!
     def listener(event):
         print("inside nested switcher listener")#!
-        nonlocal ui, switcher
+        nonlocal ui_record, switcher_driver
         try:
             data = str(event.arguments["data"].decode())
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
         print(F"Event on switcher: {data}")
-        switcher.update_state(data)
-        if "touchpad" in ui.device_id:
-            ui.device.port[1].channel[31] = switcher.input_three_is_active
-            ui.device.port[1].channel[32] = switcher.input_four_is_active
-            ui.device.port[1].channel[33] = switcher.input_six_is_active
-            ui.device.port[1].channel[26] = switcher.volume_is_muted
-            ui.device.port[1].level[1] = switcher.get_normalized_volume()*255
-        elif "keypad" in ui.device_id:
-            # TODO implement keypad support
-            pass
+        switcher_driver.update_state(data)
+        print("Returned from update_state. Inside switcher listener")#!
+        print(f"{ui_record.device_id=}")#!
+        if "touchpad" in ui_record.device_id:
+            print("inside listener if statement")#!
+            ui_record.muse_device.port[1].channel[31] = switcher_driver.input_three_is_active
+            ui_record.muse_device.port[1].channel[32] = switcher_driver.input_four_is_active
+            ui_record.muse_device.port[1].channel[33] = switcher_driver.input_six_is_active
+            ui_record.muse_device.port[1].channel[26] = switcher_driver.volume_is_muted
+            ui_record.muse_device.port[1].level[1] = switcher_driver.get_normalized_volume()*255
+        #elif "keypad" in ui.device_id:
+        #    # TODO implement keypad support
+        #    pass
+        print("end of listener")
     return listener
 
 
@@ -144,7 +148,8 @@ def setup_rooms(event=None):
     # remove built in devices
     device_ids = prune_devices(
         list(context.devices.ids()), ("franky", "led", "idevice")
-    )
+    )        
+    global device_registry
     device_registry = DeviceRegistry()
     device_registry.update(device_ids)
     print(f"{device_registry=}")#!
@@ -167,32 +172,32 @@ def setup_rooms(event=None):
                     # muse listeners must accept an event argument. event.value tells you if the you are handling a press or release
                     # executes function on push, executes noop on release
                     "port/1/button/9": lambda event: (
-                        display_record.toggle_power() if event.value else None
+                        print(f"Button 9 event: {event.value}") or display_record.driver.toggle_power() if event.value else None
                     ),
                     "port/1/button/210": lambda event: (
-                        display_record.toggle_pic_mute() if event.value else None
+                        print(f"Button 9 event: {event.value}") or display_record.driver.toggle_pic_mute() if event.value else None
                     ),
                     "port/1/button/24": lambda event: (
-                        switcher_record.start_volume_ramp_up()
+                        print(f"Button 9 event: {event.value}") or switcher_record.driver.start_volume_ramp_up()
                         if event.value
-                        else switcher_record.stop_volume_ramp_up()
+                        else switcher_record.driver.stop_volume_ramp_up()
                     ),
                     "port/1/button/25": lambda event: (
-                        switcher_record.start_volume_ramp_down()
+                        print(f"Button 9 event: {event.value}") or switcher_record.driver.start_volume_ramp_down()
                         if event.value
-                        else switcher_record.stop_volume_ramp_down()
+                        else switcher_record.driver.stop_volume_ramp_down()
                     ),
                     "port/1/button/26": lambda event: (
-                        switcher_record.toggle_vol_mute() if event.value else None
+                        print(f"Button 9 event: {event.value}") or switcher_record.driver.toggle_vol_mute() if event.value else None
                     ),
                     "port/1/button/31": lambda event: (
-                        switcher_record.select_source_three() if event.value else None
+                        print(f"Button 9 event: {event.value}") or switcher_record.driver.select_source_three() if event.value else None
                     ),
                     "port/1/button/32": lambda event: (
-                        switcher_record.select_source_four() if event.value else None
+                        print(f"Button 9 event: {event.value}") or switcher_record.driver.select_source_four() if event.value else None
                     ),
                     "port/1/button/33": lambda event: (
-                        switcher_record.select_source_six() if event.value else None
+                        print(f"Button 9 event: {event.value}") or switcher_record.driver.select_source_six() if event.value else None
                     ),
                 }
                 print(f"Buttons configured for {room}")
@@ -200,19 +205,21 @@ def setup_rooms(event=None):
                 for key, action in buttons.items():
                     port = int(key.split("/")[1])
                     id = int(key.split("/")[3])
-                    ui_record.muse_device.device.port[port].button[id].watch(action)
+                    ui_record.driver.device.port[port].button[id].watch(action)#!
                     print(f"Adding button watcher for {port=} and {id=}")
                 print(f"Button watchers registered for {room}")
 
             # register feedback listeners with muse devices
             print(f"adding display listener for {room}")
-            display_record.muse_device.device.receive.listen(
-                get_display_listener(ui_record.muse_device, display_record.driver)
+            display_record.driver.device.receive.listen(#!
+                get_display_listener(ui_record, display_record.driver)
             )
             print(f"adding switcher listener for {room}")
-            switcher_record.muse_device.device.receive.listen(
-                get_switcher_listener(ui_record.muse_device, switcher_record.driver)
+            switcher_record.driver.device.receive.listen(#!
+                get_switcher_listener(ui_record, switcher_record.driver)
             )
+
+            
 
 tick = context.services.get("timeline") 
 tick.start([10000],True,-1) 
@@ -225,3 +232,4 @@ muse.online(setup_rooms)
 
 print("script complete")
 
+context.run(globals())

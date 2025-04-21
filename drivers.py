@@ -202,8 +202,9 @@ class ExtronDriver:
             print("sending mute off")
             self.device.send(self.VOL_MUTE_OFF_COMMAND)
         else:
-            print("sending mute on")
+            print(f"sending mute on {self.VOL_MUTE_ON_COMMAND=}")
             self.device.send(self.VOL_MUTE_ON_COMMAND)
+        print(f"{self.volume_is_muted=}")
 
     def select_source_three(self):
         print("select_source_three")
