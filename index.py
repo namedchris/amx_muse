@@ -205,9 +205,11 @@ def setup_rooms(event=None):
                 print(f"Button watchers registered for {room}")
 
             # register feedback listeners with muse devices
+            print(f"adding display listener for {room}")
             display_record.muse_device.device.receive.listen(
                 get_display_listener(ui_record.muse_device, display_record.driver)
             )
+            print(f"adding switcher listener for {room}")
             switcher_record.muse_device.device.receive.listen(
                 get_switcher_listener(ui_record.muse_device, switcher_record.driver)
             )
