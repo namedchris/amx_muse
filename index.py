@@ -23,6 +23,12 @@ class DeviceRecord:
         self.room = "-".join(split_id[:2])
         print(vars(self))#!
 
+    def __eq__(self, other_device_id):
+        if(self.device_id == other_device_id):
+            return True
+        else:
+            return False
+        
 class DeviceRegistry:
     def __init__(self):
         self.device_records = set()
@@ -31,16 +37,21 @@ class DeviceRegistry:
     def update(self, muse_device_ids):
 
         muse_device_ids = set(muse_device_ids)
+        # get ids for all records
         current_device_ids = set(device_record.device_id for device_record in self.device_records)  # Get device_ids from the new list
        
-        # Remove devices that are no longer defined in muse
-        dropped_devices = set()
-        for record in list(self.device_records):
-            if record.device_id not in current_device_ids:
-                dropped_devices.add(record)
-        self.device_records = self.device_records - dropped_devices        
-       
-        # Add new device records
+        # make a set of device id that are no longer in the system
+        dropped_device_ids = set()
+        for device_id in list(current_device_ids):
+            if device_id not in muse_device_ids:
+                dropped_device_ids.add(device_id)
+        # make a set if record that need removed from the registry
+        dropped_device_records = {record for record in self.device_records if record.device_id in dropped_device_ids}
+        self.device_registry = self.device_records - dropped_device_records        
+
+        # get ids for all records
+        current_device_ids = set(device_record.device_id for device_record in self.device_records)  # Get device_ids from the new list
+        # get a list of only new device ids so we don't override existing records
         new_device_ids = muse_device_ids - current_device_ids
         new_device_records = set()
 
@@ -64,12 +75,6 @@ class DeviceRegistry:
     
     #Return the next record of that type for the given room
     def get_display_record_by_room(self,room):
-        #displays = self.get_display_records()
-        #print(f"{displays=}")
-        #for display in displays:
-        #    print(f"{display.room} and {room}")
-        #    if display.room == room:
-        #        return display
         return next(iter(r for r in self.device_records if (r.room == room) and r.kind in ("monitor","projector")), None)
     
     def get_ui_record_by_room(self,room):
