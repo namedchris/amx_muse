@@ -148,10 +148,6 @@ def setup_rooms(event=None):
     device_registry = DeviceRegistry()
     device_registry.update(device_ids)
     print(f"{device_registry=}")#!
-    switchers = device_registry.get_switcher_records()
-    uis = device_registry.get_ui_records()
-    displays = device_registry.get_display_records()
-
     for room in device_registry.get_rooms():
         print(f"setting up room {room}")
         device_records = [device for device in device_registry.device_records if device.room==room]
@@ -162,6 +158,7 @@ def setup_rooms(event=None):
             switcher_record = device_registry.get_switcher_record_by_room(room)
             ui_record = device_registry.get_ui_record_by_room(room)
             print(f"Line 164: {display_record.device_id=} and {switcher_record.device_id=}")#!
+            # skip this room if it is missing a switcher or display
             if not display_record or not switcher_record:
                 continue
             if device_record.kind == "touchpad":
@@ -204,6 +201,7 @@ def setup_rooms(event=None):
                     port = int(key.split("/")[1])
                     id = int(key.split("/")[3])
                     ui_record.muse_device.device.port[port].button[id].watch(action)
+                    print("Adding button watcher for ")
                 print(f"Button watchers registered for {room}")
 
             # register feedback listeners with muse devices
