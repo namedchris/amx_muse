@@ -128,10 +128,9 @@ class ExtronDriver:
         return normalized_volume    
 
     def update_state(self, feedback):
-        print(f"{feedback=}")#!
         lines = feedback.split("\r\n")
-        print(f"{lines=}")#!
         for line in lines:
+
             if line.startswith("In03 All"):
                     self.input_three_is_active, self.input_four_is_active, self.input_six_is_active = (
                         True,
@@ -151,11 +150,9 @@ class ExtronDriver:
                         True,
                     )
             if "GrpmD2" in line:
-                print("Inside GrpmD2")#!
                 self.volume_is_muted = False if (line.split("*")[1][0]) == '0' else True
                 print(f"GRPMD2 {self.volume_is_muted=}")
             elif "GrpmD1" in line:
-                print("Inside GrpmD1")#!
                 self.volume_level = int(line.split("*")[1].strip())
                 print(f"{self.volume_level=}")
            
@@ -197,14 +194,13 @@ class ExtronDriver:
     def toggle_vol_mute(self):
         print("toggle vol mute")
         # TODO send toggle vol mute command
-        print(f"{self.volume_is_muted=}")
+        print(f"{self.volume_is_muted=}")#!
         if self.volume_is_muted:
             print("sending mute off")
             self.device.send(self.VOL_MUTE_OFF_COMMAND)
         else:
-            print(f"sending mute on {self.VOL_MUTE_ON_COMMAND=}")
+            print("sending mute on")
             self.device.send(self.VOL_MUTE_ON_COMMAND)
-        print(f"{self.volume_is_muted=}")
 
     def select_source_three(self):
         print("select_source_three")

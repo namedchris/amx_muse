@@ -21,8 +21,6 @@ class DeviceRecord:
                 self.driver = drivers.EpsonDriver(device_id,muse_device)
         split_id = device_id.split("-")
         self.room = "-".join(split_id[:2])
-        print(vars(self))#!
-
         
 class DeviceRegistry:
     def __init__(self):
@@ -42,7 +40,7 @@ class DeviceRegistry:
                 dropped_device_ids.add(device_id)
         # make a set if record that need removed from the registry
         dropped_device_records = {record for record in self.device_records if record.device_id in dropped_device_ids}
-        self.device_records = self.device_records - dropped_device_records#!        
+        self.device_records = self.device_records - dropped_device_records   
 
         # get ids for all records
         current_device_ids = set(device_record.device_id for device_record in self.device_records)  # Get device_ids from the new list
@@ -83,9 +81,7 @@ class DeviceRegistry:
     
 # create a listener for display feedback
 def get_display_listener(ui_record, display_driver):
-    print("inside get display listener")#!
     def listener(event):
-        print("inside nested display listener")#!
         nonlocal ui_record, display_driver
         try:
             print(data)
@@ -109,29 +105,23 @@ def get_display_listener(ui_record, display_driver):
 
 # create a listener for switchers
 def get_switcher_listener(ui_record, switcher_driver):
-    print("inside get switcher listener")#!
     def listener(event):
-        print("inside nested switcher listener")#!
         nonlocal ui_record, switcher_driver
         try:
             data = str(event.arguments["data"].decode())
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
-        print(F"Event on switcher: {data}")
+        print(F"Event on switcher: {data}") 
         switcher_driver.update_state(data)
-        print("Returned from update_state. Inside switcher listener")#!
-        print(f"{ui_record.device_id=}")#!
         if "touchpad" in ui_record.device_id:
-            print("inside listener if statement")#!
             ui_record.muse_device.port[1].channel[31] = switcher_driver.input_three_is_active
             ui_record.muse_device.port[1].channel[32] = switcher_driver.input_four_is_active
             ui_record.muse_device.port[1].channel[33] = switcher_driver.input_six_is_active
             ui_record.muse_device.port[1].channel[26] = switcher_driver.volume_is_muted
             ui_record.muse_device.port[1].level[1] = switcher_driver.get_normalized_volume()*255
-        #elif "keypad" in ui.device_id:
-        #    # TODO implement keypad support
-        #    pass
-        print("end of listener")
+        elif "keypad" in ui_record.device_id:
+            # TODO implement keypad support
+            pass
     return listener
 
 
@@ -152,17 +142,14 @@ def setup_rooms(event=None):
     global device_registry
     device_registry = DeviceRegistry()
     device_registry.update(device_ids)
-    print(f"{device_registry=}")#!
     for room in device_registry.get_rooms():
         print(f"setting up room {room}")
         device_records = [device for device in device_registry.device_records if device.room==room]
-        print(f"{device_records=}")#!
         for device_record in device_records:
             # setup button watchers for room
             display_record = device_registry.get_display_record_by_room(room)
             switcher_record = device_registry.get_switcher_record_by_room(room)
             ui_record = device_registry.get_ui_record_by_room(room)
-            print(f"Line 164:\n    {display_record.device_id=}\n    {switcher_record.device_id=}\n    {ui_record.device_id=}")#!
             # skip this room if it is missing a switcher or display
             if not display_record or not switcher_record:
                 continue
@@ -172,32 +159,32 @@ def setup_rooms(event=None):
                     # muse listeners must accept an event argument. event.value tells you if the you are handling a press or release
                     # executes function on push, executes noop on release
                     "port/1/button/9": lambda event: (
-                        print(f"Button 9 event: {event.value}") or display_record.driver.toggle_power() if event.value else None
+                        display_record.driver.toggle_power() if event.value else None
                     ),
                     "port/1/button/210": lambda event: (
-                        print(f"Button 9 event: {event.value}") or display_record.driver.toggle_pic_mute() if event.value else None
+                        display_record.driver.toggle_pic_mute() if event.value else None
                     ),
                     "port/1/button/24": lambda event: (
-                        print(f"Button 9 event: {event.value}") or switcher_record.driver.start_volume_ramp_up()
+                        switcher_record.driver.start_volume_ramp_up()
                         if event.value
                         else switcher_record.driver.stop_volume_ramp_up()
                     ),
                     "port/1/button/25": lambda event: (
-                        print(f"Button 9 event: {event.value}") or switcher_record.driver.start_volume_ramp_down()
+                        switcher_record.driver.start_volume_ramp_down()
                         if event.value
                         else switcher_record.driver.stop_volume_ramp_down()
                     ),
                     "port/1/button/26": lambda event: (
-                        print(f"Button 9 event: {event.value}") or switcher_record.driver.toggle_vol_mute() if event.value else None
+                        switcher_record.driver.toggle_vol_mute() if event.value else None
                     ),
                     "port/1/button/31": lambda event: (
-                        print(f"Button 9 event: {event.value}") or switcher_record.driver.select_source_three() if event.value else None
+                        switcher_record.driver.select_source_three() if event.value else None
                     ),
                     "port/1/button/32": lambda event: (
-                        print(f"Button 9 event: {event.value}") or switcher_record.driver.select_source_four() if event.value else None
+                        switcher_record.driver.select_source_four() if event.value else None
                     ),
                     "port/1/button/33": lambda event: (
-                        print(f"Button 9 event: {event.value}") or switcher_record.driver.select_source_six() if event.value else None
+                        switcher_record.driver.select_source_six() if event.value else None
                     ),
                 }
                 print(f"Buttons configured for {room}")
@@ -205,19 +192,19 @@ def setup_rooms(event=None):
                 for key, action in buttons.items():
                     port = int(key.split("/")[1])
                     id = int(key.split("/")[3])
-                    ui_record.driver.device.port[port].button[id].watch(action)#!
+                    ui_record.driver.device.port[port].button[id].watch(action)
                     print(f"Adding button watcher for {port=} and {id=}")
                 print(f"Button watchers registered for {room}")
 
-            # register feedback listeners with muse devices
-            print(f"adding display listener for {room}")
-            display_record.driver.device.receive.listen(#!
-                get_display_listener(ui_record, display_record.driver)
-            )
-            print(f"adding switcher listener for {room}")
-            switcher_record.driver.device.receive.listen(#!
-                get_switcher_listener(ui_record, switcher_record.driver)
-            )
+        # register feedback listeners with muse devices
+        print(f"adding display listener for {room}")
+        display_record.driver.device.receive.listen(
+            get_display_listener(ui_record, display_record.driver)
+        )
+        print(f"adding switcher listener for {room}")
+        switcher_record.driver.device.receive.listen(
+            get_switcher_listener(ui_record, switcher_record.driver)
+        )
 
             
 
@@ -231,5 +218,3 @@ print("starting script")
 muse.online(setup_rooms)
 
 print("script complete")
-
-context.run(globals())
