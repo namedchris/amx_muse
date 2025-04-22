@@ -1,7 +1,6 @@
 from mojo import context
 import drivers
 
-device_registry = None
 class DeviceRecord:
     def __init__(self,device_id,muse_device):
         self.device_id = device_id
@@ -133,13 +132,11 @@ def prune_devices(devices, prunings):
 
 
 # populate the lists and dictionaries; create and register watchers and listeners
-def setup_rooms(event=None):
+def setup_rooms(device_registry):
     # remove built in devices
     device_ids = prune_devices(
         list(context.devices.ids()), ("franky", "led", "idevice")
     )        
-    global device_registry
-    device_registry = DeviceRegistry()
     device_registry.update(device_ids)
     for room in device_registry.get_rooms():
         print(f"setting up room {room}")
@@ -205,7 +202,12 @@ def setup_rooms(event=None):
             get_switcher_listener(ui_record, switcher_record.driver)
         )
 
-            
+
+device_registry = DeviceRegistry()
+device_registry.update()        
+
+def start(event=None):
+    setup_rooms(device_registry)
 
 tick = context.services.get("timeline") 
 tick.start([10000],True,-1) 
@@ -214,6 +216,6 @@ tick.start([10000],True,-1)
 muse = context.devices.get("idevice")
 print("starting script")
 # setup rooms when controller comes online
-muse.online(setup_rooms)
+muse.online(start)
 
 print("script complete")
