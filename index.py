@@ -93,8 +93,8 @@ def get_display_listener(ui_record, display_driver):
         print(F"Event on display: {data}")
         if "touchpad" in ui_record.device_id:
             # update button state
-            power_button = ui_record.device.port[1].channel[9]
-            pic_mute_button = ui_record.device.port[1].channel[210]
+            power_button = ui_record.driver.device.port[1].channel[9]
+            pic_mute_button = ui_record.driver.device.port[1].channel[210]
             power_button.value = display_driver.power_is_on
             pic_mute_button.value = display_driver.pic_mute_is_on
         elif "keypad" in ui_record.device_id:
