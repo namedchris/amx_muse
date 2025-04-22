@@ -27,11 +27,12 @@ class DeviceRecord:
         self.has_listeners = False
         self.has_watchers = False
 
-    def online_callback(self):
+    def online_callback(self, event):
         self.is_online = True
 
-    def offline_callback(self):
+    def offline_callback(self, event):
         self.is_online = False
+
 class DeviceRegistry:
     def __init__(self):
         self.device_records = set()
@@ -144,42 +145,42 @@ def setup_rooms(event = None):
         display_record = device_registry.get_display_record_by_room(room)
         switcher_record = device_registry.get_switcher_record_by_room(room)
         ui_record = device_registry.get_ui_record_by_room(room)
-        print("Setting up buttons for {ui_record.device_id}")#!
-        buttons = {
-            # muse watchers must accept an event argument. event.value tells you if the you are handling a press or release
-            # executes function on push, executes noop on release
-            "port/1/button/9": lambda event: (
-                display_record.driver.toggle_power() if event.value else None
-            ),
-            "port/1/button/210": lambda event: (
-                display_record.driver.toggle_pic_mute() if event.value else None
-            ),
-            "port/1/button/24": lambda event: (
-                switcher_record.driver.start_volume_ramp_up()
-                if event.value
-                else switcher_record.driver.stop_volume_ramp_up()
-            ),
-            "port/1/button/25": lambda event: (
-                switcher_record.driver.start_volume_ramp_down()
-                if event.value
-                else switcher_record.driver.stop_volume_ramp_down()
-            ),
-            "port/1/button/26": lambda event: (
-                switcher_record.driver.toggle_vol_mute() if event.value else None
-            ),
-            "port/1/button/31": lambda event: (
-                switcher_record.driver.select_source_three() if event.value else None
-            ),
-            "port/1/button/32": lambda event: (
-                switcher_record.driver.select_source_four() if event.value else None
-            ),
-            "port/1/button/33": lambda event: (
-                switcher_record.driver.select_source_six() if event.value else None
-            ),
-        }
-        print(f"Buttons configured for {room}")
-        # register watchers
         if not ui_record.has_watchers:
+            print("Setting up buttons for {ui_record.device_id}")#!
+            buttons = {
+                # muse watchers must accept an event argument. event.value tells you if the you are handling a press or release
+                # executes function on push, executes noop on release
+                "port/1/button/9": lambda event: (
+                    display_record.driver.toggle_power() if event.value else None
+                ),
+                "port/1/button/210": lambda event: (
+                    display_record.driver.toggle_pic_mute() if event.value else None
+                ),
+                "port/1/button/24": lambda event: (
+                    switcher_record.driver.start_volume_ramp_up()
+                    if event.value
+                    else switcher_record.driver.stop_volume_ramp_up()
+                ),
+                "port/1/button/25": lambda event: (
+                    switcher_record.driver.start_volume_ramp_down()
+                    if event.value
+                    else switcher_record.driver.stop_volume_ramp_down()
+                ),
+                "port/1/button/26": lambda event: (
+                    switcher_record.driver.toggle_vol_mute() if event.value else None
+                ),
+                "port/1/button/31": lambda event: (
+                    switcher_record.driver.select_source_three() if event.value else None
+                ),
+                "port/1/button/32": lambda event: (
+                    switcher_record.driver.select_source_four() if event.value else None
+                ),
+                "port/1/button/33": lambda event: (
+                    switcher_record.driver.select_source_six() if event.value else None
+                ),
+            }
+            print(f"Buttons configured for {room}")
+            # register watchers
             for key, action in buttons.items():
                 port = int(key.split("/")[1])
                 id = int(key.split("/")[3])
@@ -206,8 +207,13 @@ muse_device_ids = prune_devices(list(context.devices.ids()), ("franky", "led", "
 device_registry = DeviceRegistry()
 device_registry.update(muse_device_ids)        
 
+def new_device_listener(event = None):
+    print("Checking for new devices...")
+    setup_rooms()
+
 tick = context.services.get("timeline") 
 tick.start([10000],True,-1) 
+tick.expired.listen(new_device_listener)
 
 # get controller context
 muse = context.devices.get("idevice")
