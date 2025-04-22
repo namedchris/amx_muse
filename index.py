@@ -5,7 +5,6 @@ device_registry = None
 class DeviceRecord:
     def __init__(self,device_id,muse_device):
         self.device_id = device_id
-        self.muse_device = muse_device
         self.kind = device_id.split("-")[2]
         self.driver = None
         match self.kind:
@@ -114,11 +113,11 @@ def get_switcher_listener(ui_record, switcher_driver):
         print(F"Event on switcher: {data}") 
         switcher_driver.update_state(data)
         if "touchpad" in ui_record.device_id:
-            ui_record.muse_device.port[1].channel[31] = switcher_driver.input_three_is_active
-            ui_record.muse_device.port[1].channel[32] = switcher_driver.input_four_is_active
-            ui_record.muse_device.port[1].channel[33] = switcher_driver.input_six_is_active
-            ui_record.muse_device.port[1].channel[26] = switcher_driver.volume_is_muted
-            ui_record.muse_device.port[1].level[1] = switcher_driver.get_normalized_volume()*255
+            ui_record.driver.device.port[1].channel[31] = switcher_driver.input_three_is_active
+            ui_record.driver.device.port[1].channel[32] = switcher_driver.input_four_is_active
+            ui_record.driver.device.port[1].channel[33] = switcher_driver.input_six_is_active
+            ui_record.driver.device.port[1].channel[26] = switcher_driver.volume_is_muted
+            ui_record.driver.device.port[1].level[1] = switcher_driver.get_normalized_volume()*255
         elif "keypad" in ui_record.device_id:
             # TODO implement keypad support
             pass
