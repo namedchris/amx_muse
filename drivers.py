@@ -18,40 +18,42 @@ class EpsonDriver:
         self.device = device
         self.power_is_on = False
         self.pic_mute_is_on = False
-        self.recv_buffer = ''
-
+        self.recv_buffer = ""
 
 
 class LGDriver:
 
     # commands
-    POWER_OFF_COMMAND = "ka 00 00\x0D"
-    POWER_ON_COMMAND = "ka 00 01\x0D"
-    PIC_MUTE_OFF_COMMAND = "kd 0 00\x0D"
-    PIC_MUTE_ON_COMMAND = "kd 1 01\x0D"
+    POWER_OFF_COMMAND = "ka 00 00\x0d"
+    POWER_ON_COMMAND = "ka 00 01\x0d"
+    PIC_MUTE_OFF_COMMAND = "kd 0 00\x0d"
+    PIC_MUTE_ON_COMMAND = "kd 1 01\x0d"
     # acknowledgements
     POWER_ON_ACK = "a 01 OK01x"
     POWER_OFF_ACK = "a 01 OK00x"
     PIC_MUTE_ON_ACK = "d 01 OK01x"
     PIC_MUTE_OFF_ACK = "d 01 OK00x"
     # errors
-    POWER_ON_ERROR = "a 01 NG01x" #returned when powered on monitor is asked to power on
-    POWER_OFF_ERROR = "a 01 NG00x" #returned when powered on monitor is asked to power off
+    POWER_ON_ERROR = (
+        "a 01 NG01x"  # returned when powered on monitor is asked to power on
+    )
+    POWER_OFF_ERROR = (
+        "a 01 NG00x"  # returned when powered on monitor is asked to power off
+    )
 
     def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device
         self.power_is_on = False
         self.pic_mute_is_on = False
-        self.recv_buffer = ''
-        
+        self.recv_buffer = ""
 
     def update_state(self):
         lines = []
         # consume buffer, appending lines to lines, leaving unterminated lines in the buffer
-        while 'x' in self.recv_buffer:
-            items = self.recv_buffer.partition('x')
-            line = items[0]+items[1]
+        while "x" in self.recv_buffer:
+            items = self.recv_buffer.partition("x")
+            line = items[0] + items[1]
             self.recv_buffer = items[2]
             print(f"{line=}\n{self.recv_buffer=}")
             lines.append(line)
@@ -95,8 +97,8 @@ class ExtronDriver:
     SOURCE_THREE_COMMAND = "3!\r"
     SOURCE_FOUR_COMMAND = "4!\r"
     SOURCE_SIX_COMMAND = "6!\r"
-    VOL_MUTE_OFF_COMMAND = '\x1BD2*0GRPM\r\n'
-    VOL_MUTE_ON_COMMAND = '\x1BD2*1GRPM\r\n'
+    VOL_MUTE_OFF_COMMAND = "\x1bD2*0GRPM\r\n"
+    VOL_MUTE_ON_COMMAND = "\x1bD2*1GRPM\r\n"
 
     VOLUME_DELTA = 10
     MIN_VOLUME = -500
@@ -118,51 +120,62 @@ class ExtronDriver:
         self.input_six_is_active = False
         self.volume_level = -400
         self.volume_is_muted = False
-    
-    #returns volume as a percentage of the MIN_VOLUME - MAX_VOLUME  range
-    #The math here will evaluate to the correct volume percentage even with different MIN_VOLUME and MAX_VOLUME values
+
+    # returns volume as a percentage of the MIN_VOLUME - MAX_VOLUME  range
+    # The math here will evaluate to the correct volume percentage even with different MIN_VOLUME and MAX_VOLUME values
     def get_normalized_volume(self):
         range = self.MAX_VOLUME - self.MIN_VOLUME
-        offset = 0-self.MIN_VOLUME
-        normalized_volume = (self.volume_level + offset)/range
-        return normalized_volume    
+        offset = 0 - self.MIN_VOLUME
+        normalized_volume = (self.volume_level + offset) / range
+        return normalized_volume
 
     def update_state(self, feedback):
         lines = feedback.split("\r\n")
         for line in lines:
 
             if line.startswith("In03 All"):
-                    self.input_three_is_active, self.input_four_is_active, self.input_six_is_active = (
-                        True,
-                        False,
-                        False,
-                    )
+                (
+                    self.input_three_is_active,
+                    self.input_four_is_active,
+                    self.input_six_is_active,
+                ) = (
+                    True,
+                    False,
+                    False,
+                )
             elif line.startswith("In04 All"):
-                    self.input_three_is_active, self.input_four_is_active, self.input_six_is_active = (
-                        False,
-                        True,
-                        False,
-                    )
+                (
+                    self.input_three_is_active,
+                    self.input_four_is_active,
+                    self.input_six_is_active,
+                ) = (
+                    False,
+                    True,
+                    False,
+                )
             elif line.startswith("In06 All"):
-                    self.input_three_is_active, self.input_four_is_active, self.input_six_is_active = (
-                        False,
-                        False,
-                        True,
-                    )
+                (
+                    self.input_three_is_active,
+                    self.input_four_is_active,
+                    self.input_six_is_active,
+                ) = (
+                    False,
+                    False,
+                    True,
+                )
             if "GrpmD2" in line:
-                self.volume_is_muted = False if (line.split("*")[1][0]) == '0' else True
+                self.volume_is_muted = False if (line.split("*")[1][0]) == "0" else True
                 print(f"GRPMD2 {self.volume_is_muted=}")
             elif "GrpmD1" in line:
                 self.volume_level = int(line.split("*")[1].strip())
                 print(f"{self.volume_level=}")
-           
 
     def ramp_volume_up(self):
         while self.is_ramping_up.is_set():
             target_volume_level = min(
                 self.volume_level + self.VOLUME_DELTA, self.MAX_VOLUME
             )
-            self.device.send(f"\x1BD1*{target_volume_level}GRPM\r\n")
+            self.device.send(f"\x1bD1*{target_volume_level}GRPM\r\n")
             print("vol up")
             time.sleep(self.SLEEP_TIME)
 
@@ -171,7 +184,7 @@ class ExtronDriver:
             target_volume_level = max(
                 self.volume_level - self.VOLUME_DELTA, self.MIN_VOLUME
             )
-            self.device.send(f"\x1BD1*{target_volume_level}GRPM\r\n")
+            self.device.send(f"\x1bD1*{target_volume_level}GRPM\r\n")
             time.sleep(self.SLEEP_TIME)
             print("vol down")
 
@@ -194,7 +207,7 @@ class ExtronDriver:
     def toggle_vol_mute(self):
         print("toggle vol mute")
         # TODO send toggle vol mute command
-        print(f"{self.volume_is_muted=}")#!
+        print(f"{self.volume_is_muted=}")  #!
         if self.volume_is_muted:
             print("sending mute off")
             self.device.send(self.VOL_MUTE_OFF_COMMAND)
@@ -215,6 +228,7 @@ class ExtronDriver:
         print("select_source_six")
         self.device.send(self.SOURCE_SIX_COMMAND)
 
+
 class TouchpadDriver:
 
     def __init__(self, device_id, device):
@@ -223,10 +237,10 @@ class TouchpadDriver:
         self.set_label()
 
     def set_label(self):
-        room,number,type,index = self.device_id.split("-")
-        self.device.port[1].send_command(f"^TXT-201,0,{room.upper()}-{number}")   
+        room, number, type, index = self.device_id.split("-")
+        self.device.port[1].send_command(f"^TXT-201,0,{room.upper()}-{number}")
 
-    
+
 class KeyPadDriver:
 
     def __init__(self, device_id, device):
