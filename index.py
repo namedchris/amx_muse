@@ -199,35 +199,35 @@ def setup_rooms(event=None):
             buttons = {
                 # muse watchers must accept an event argument. event.value tells you if the you are handling a press or release
                 # executes function on push, executes noop on release
-                "port/1/button/9": lambda event: (
-                    display_record.driver.toggle_power() if event.value else None
+                "port/1/button/9": lambda event, dd=display_record.driver: (
+                    dd.toggle_power() if event.value else None
                 ),
-                "port/1/button/210": lambda event: (
-                    display_record.driver.toggle_pic_mute() if event.value else None
+                "port/1/button/210": lambda event, dd=display_record.driver: (
+                    dd.toggle_pic_mute() if event.value else None
                 ),
-                "port/1/button/24": lambda event: (
-                    switcher_record.driver.start_volume_ramp_up()
+                "port/1/button/24": lambda event, sd=switcher_record.driver: (
+                    sd.start_volume_ramp_up()
                     if event.value
-                    else switcher_record.driver.stop_volume_ramp_up()
+                    else sd.stop_volume_ramp_up()
                 ),
-                "port/1/button/25": lambda event: (
-                    switcher_record.driver.start_volume_ramp_down()
+                "port/1/button/25": lambda event, sd=switcher_record.driver: (
+                    sd.start_volume_ramp_down()
                     if event.value
-                    else switcher_record.driver.stop_volume_ramp_down()
+                    else sd.stop_volume_ramp_down()
                 ),
-                "port/1/button/26": lambda event: (
-                    switcher_record.driver.toggle_vol_mute() if event.value else None
+                "port/1/button/26": lambda event, sd=switcher_record.driver: (
+                    sd.toggle_vol_mute() if event.value else None
                 ),
-                "port/1/button/31": lambda event: (
-                    switcher_record.driver.select_source_three()
+                "port/1/button/31": lambda event, sd=switcher_record.driver: (
+                    sd.select_source_three()
                     if event.value
                     else None
                 ),
-                "port/1/button/32": lambda event: (
-                    switcher_record.driver.select_source_four() if event.value else None
+                "port/1/button/32": lambda event, sd=switcher_record.driver: (
+                    sd.select_source_four() if event.value else None
                 ),
-                "port/1/button/33": lambda event: (
-                    switcher_record.driver.select_source_six() if event.value else None
+                "port/1/button/33": lambda event, sd=switcher_record.driver: (
+                    sd.select_source_six() if event.value else None
                 ),
             }
             print(f"Buttons configured for {room}")
