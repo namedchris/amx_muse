@@ -44,14 +44,14 @@ class LGDriver(BaseDriver):
     PIC_MUTE_ON_COMMAND = "kd 1 01\x0d"
 
     # queries
-    POWER_QUERY = "kd 0 FF\x0d"
+    POWER_QUERY = "ka 0 FF\x0d"
     PIC_MUTE_QUERY = "kc 0 FF\x0d"
 
     # query acknowledgements
-    POWER_QUERY_ON_ACK = "c 01 OK06x"
-    POWER_QUERY_OFF_ACK = (
-        "c 01 OK06x"  #!This needs to be changed to correspond to the correct ack
-    )
+    POWER_ON_QUERY_ACK = "a 01 OK01x"
+    PIC_MUTE_OFF_QUERY_ACK = "c 01 OK00x"
+    PIC_MUTE_ON_QUERY_ACK = "c 01 OK01x"
+    # PIC_MUTE_QUERY_ERROR = "c 01 NGffx" #Note: this may not be needed
 
     # acknowledgements
     POWER_ON_ACK = "a 01 OK01x"
@@ -79,7 +79,9 @@ class LGDriver(BaseDriver):
         self.query_state()
 
     def query_state(self):
+        print(f"Sending power query for {self.device_id}")
         self.device.send(self.POWER_QUERY)
+        print(f"Sending pic mute query {self.device_id}")
         self.device.send(self.PIC_MUTE_QUERY)
 
     def update_state(self):
@@ -98,11 +100,11 @@ class LGDriver(BaseDriver):
             match line:
                 case self.POWER_OFF_ACK | self.POWER_OFF_ERROR:
                     self.power_is_on = False
-                case self.POWER_ON_ACK | self.POWER_ON_ERROR:
+                case self.POWER_ON_ACK | self.POWER_ON_ERROR | self.POWER_ON_QUERY_ACK:
                     self.power_is_on = True
-                case self.PIC_MUTE_OFF_ACK:
+                case self.PIC_MUTE_OFF_ACK | self.PIC_MUTE_OFF_QUERY_ACK:
                     self.pic_mute_is_on = False
-                case self.PIC_MUTE_ON_ACK:
+                case self.PIC_MUTE_ON_ACK | self.PIC_MUTE_ON_QUERY_ACK:
                     self.pic_mute_is_on = True
 
     def toggle_power(self):
@@ -161,6 +163,7 @@ class ExtronDriver(BaseDriver):
         self.volume_is_muted = False
 
     def run_online_tasks(self):
+        print(f"Running online tasks for {self.device_id}")
         self.query_state()
 
     def query_state(self):

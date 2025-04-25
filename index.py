@@ -30,7 +30,8 @@ class DeviceRecord:
         self.has_watchers = False
 
     def online_callback(self, event):
-        self.driver.run_online_tasks()
+        print(f"Running online callback on {self.device_id}")
+        # self.driver.run_online_tasks()
         self.is_online = True
 
     def offline_callback(self, event):
@@ -117,15 +118,16 @@ class DeviceRegistry:
 
 # create a listener for display feedback
 def get_display_listener(ui_record, display_driver):
-    print(f"generating listener for {display_driver.device_id}")
+    print(f"generating listener for {display_driver.device_id}\n")
 
     def listener(event):
         nonlocal ui_record, display_driver
+        print(f"Running listener for {display_driver.device_id}")
 
         # get data from event
         try:
             data = str(event.arguments["data"].decode())
-            print(f"event recieved for {display_driver.device_id}:\n    {data=}")
+            print(f"event recieved for {display_driver.device_id}")
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
         # add data the drivers' input buffer
@@ -262,6 +264,7 @@ def setup_rooms(event=None):
                 get_switcher_listener(ui_record, switcher_record.driver)
             )
             switcher_record.has_listeners = True
+        display_record.driver.run_online_tasks()  #!Run online tasks after listeners are set
 
 
 muse_device_ids = prune_devices(
