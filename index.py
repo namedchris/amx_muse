@@ -30,6 +30,7 @@ class DeviceRecord:
         self.has_watchers = False
 
     def online_callback(self, event):
+        self.driver.run_online_tasks()
         self.is_online = True
 
     def offline_callback(self, event):
@@ -116,20 +117,29 @@ class DeviceRegistry:
 
 # create a listener for display feedback
 def get_display_listener(ui_record, display_driver):
+    print(f"generating listener for {display_driver.device_id}")
+
     def listener(event):
         nonlocal ui_record, display_driver
+
+        # get data from event
         try:
             data = str(event.arguments["data"].decode())
+            print(f"event recieved for {display_driver.device_id}:\n    {data=}")
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
-        # update driver state
+        # add data the drivers' input buffer
         display_driver.recv_buffer += data
+        # parse input buffer
         display_driver.update_state()
+
         print(f"Event on display: {data}")
+        # update touchpad based on driver state
         if "touchpad" in ui_record.device_id:
-            # update button state
+            # set aliases for touchpad buttons
             power_button = ui_record.driver.device.port[1].channel[9]
             pic_mute_button = ui_record.driver.device.port[1].channel[210]
+            # update button state
             power_button.value = display_driver.power_is_on
             pic_mute_button.value = display_driver.pic_mute_is_on
         elif "keypad" in ui_record.device_id:
@@ -194,7 +204,7 @@ def setup_rooms(event=None):
         switcher_record = device_registry.get_switcher_record_by_room(room)
         ui_record = device_registry.get_ui_record_by_room(room)
         if not ui_record.has_watchers:
-            print("Setting up buttons for {ui_record.device_id}")  #!
+            print(f"Setting up buttons for {ui_record.device_id}")  #!
             buttons = {
                 # muse watchers must accept an event argument. event.value tells you if the you are handling a press or release
                 # executes function on push, executes noop on release
@@ -244,6 +254,8 @@ def setup_rooms(event=None):
                 get_display_listener(ui_record, display_record.driver)
             )
             display_record.has_listeners = True
+        else:
+            print(f"{display_record.device_id} already has listeners!")
         if not switcher_record.has_listeners:
             print(f"adding switcher listener for {room}")
             switcher_record.driver.device.receive.listen(
@@ -265,7 +277,7 @@ def new_device_listener(event=None):
 
 
 tick = context.services.get("timeline")
-tick.start([10000], True, -1)
+tick.start([30000], True, -1)
 tick.expired.listen(new_device_listener)
 
 # get controller context

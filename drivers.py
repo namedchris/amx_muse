@@ -2,7 +2,16 @@ import threading
 import time
 
 
-class EpsonDriver:
+class BaseDriver:
+
+    def run_online_tasks(self):
+        raise NotImplementedError
+
+    def query_state(self):
+        raise NotImplementedError
+
+
+class EpsonDriver(BaseDriver):
 
     POWER_ON_COMMAND = "PWR ON\r\n"
     POWER_OFF_COMMAND = "POW OFF\r\n"
@@ -12,6 +21,12 @@ class EpsonDriver:
     MUTE_OFF_COMMAND = "MUTE OFF\r\n"
     MUTE_QUERY = "MUTE?\r\n"
 
+    def run_online_tasks(self):
+        self.query_state()
+
+    def query_state(self):
+        pass
+
     def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device
@@ -20,19 +35,30 @@ class EpsonDriver:
         self.recv_buffer = ""
 
 
-class LGDriver:
+class LGDriver(BaseDriver):
 
     # commands
     POWER_OFF_COMMAND = "ka 00 00\x0d"
     POWER_ON_COMMAND = "ka 00 01\x0d"
-    POWER_QUERY = "kd 0 FF\x0d"
     PIC_MUTE_OFF_COMMAND = "kd 0 00\x0d"
     PIC_MUTE_ON_COMMAND = "kd 1 01\x0d"
+
+    # queries
+    POWER_QUERY = "kd 0 FF\x0d"
+    PIC_MUTE_QUERY = "kc 0 FF\x0d"
+
+    # query acknowledgements
+    POWER_QUERY_ON_ACK = "c 01 OK06x"
+    POWER_QUERY_OFF_ACK = (
+        "c 01 OK06x"  #!This needs to be changed to correspond to the correct ack
+    )
+
     # acknowledgements
     POWER_ON_ACK = "a 01 OK01x"
     POWER_OFF_ACK = "a 01 OK00x"
     PIC_MUTE_ON_ACK = "d 01 OK01x"
     PIC_MUTE_OFF_ACK = "d 01 OK00x"
+
     # errors
     POWER_ON_ERROR = (
         "a 01 NG01x"  # returned when powered on monitor is asked to power on
@@ -45,12 +71,19 @@ class LGDriver:
         self.device_id = device_id
         self.device = device
         self.power_is_on = False
-        # self.device.send(self.POWER_QUERY)
         self.pic_mute_is_on = False
 
         self.recv_buffer = ""
 
+    def run_online_tasks(self):
+        self.query_state()
+
+    def query_state(self):
+        self.device.send(self.POWER_QUERY)
+        self.device.send(self.PIC_MUTE_QUERY)
+
     def update_state(self):
+        print(f"processing buffer for {self.device_id}:\n   {self.recv_buffer=}")
         lines = []
         # consume buffer, appending lines to lines, leaving unterminated lines in the buffer
         while "x" in self.recv_buffer:
@@ -75,9 +108,9 @@ class LGDriver:
     def toggle_power(self):
         print("toggle power")
         if self.power_is_on:
-            self.device.send(self.POWER_OFF_COMMAND)
+            self.power_off()
         else:
-            self.device.send(self.POWER_ON_COMMAND)
+            self.power_on()
 
     def power_off(self):
         print("power off")
@@ -95,12 +128,16 @@ class LGDriver:
             self.device.send(self.PIC_MUTE_ON_COMMAND)
 
 
-class ExtronDriver:
+class ExtronDriver(BaseDriver):
     SOURCE_THREE_COMMAND = "3!\r"
     SOURCE_FOUR_COMMAND = "4!\r"
     SOURCE_SIX_COMMAND = "6!\r"
     VOL_MUTE_OFF_COMMAND = "\x1bD2*0GRPM\r\n"
     VOL_MUTE_ON_COMMAND = "\x1bD2*1GRPM\r\n"
+
+    QUERY_INPUT = "!"
+    QUERY_VOL_MUTE = "\x1bD2GRPM"
+    QUERY_VOL_LEVEL = "\x1d1GRPM"
 
     VOLUME_DELTA = 10
     MIN_VOLUME = -500
@@ -122,6 +159,14 @@ class ExtronDriver:
         self.input_six_is_active = False
         self.volume_level = -400
         self.volume_is_muted = False
+
+    def run_online_tasks(self):
+        self.query_state()
+
+    def query_state(self):
+        self.device.send(self.QUERY_VOL_MUTE)
+        self.device.send(self.QUERY_VOL_LEVEL)
+        self.device.send(self.QUERY_INPUT)
 
     # returns volume as a percentage of the MIN_VOLUME - MAX_VOLUME  range
     # The math here will evaluate to the correct volume percentage even with different MIN_VOLUME and MAX_VOLUME values
@@ -231,20 +276,32 @@ class ExtronDriver:
         self.device.send(self.SOURCE_SIX_COMMAND)
 
 
-class TouchpadDriver:
+class TouchpadDriver(BaseDriver):
 
     def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device
         self.set_label()
 
+    def run_online_tasks(self):
+        self.query_state()
+
+    def query_state(self):
+        pass
+
     def set_label(self):
         room, number, type, index = self.device_id.split("-")
         self.device.port[1].send_command(f"^TXT-201,0,{room.upper()}-{number}")
 
 
-class KeyPadDriver:
+class KeyPadDriver(BaseDriver):
 
     def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device
+
+    def run_online_tasks(self):
+        self.query_state()
+
+    def query_state(self):
+        pass
