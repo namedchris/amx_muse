@@ -25,6 +25,7 @@ class LGDriver:
     # commands
     POWER_OFF_COMMAND = "ka 00 00\x0d"
     POWER_ON_COMMAND = "ka 00 01\x0d"
+    POWER_QUERY = "kd 0 FF\x0d"
     PIC_MUTE_OFF_COMMAND = "kd 0 00\x0d"
     PIC_MUTE_ON_COMMAND = "kd 1 01\x0d"
     # acknowledgements
@@ -44,7 +45,9 @@ class LGDriver:
         self.device_id = device_id
         self.device = device
         self.power_is_on = False
+        # self.device.send(self.POWER_QUERY)
         self.pic_mute_is_on = False
+
         self.recv_buffer = ""
 
     def update_state(self):
@@ -60,7 +63,7 @@ class LGDriver:
             print(f"{line=}")
 
             match line:
-                case self.POWER_OFF_ACK:
+                case self.POWER_OFF_ACK | self.POWER_OFF_ERROR:
                     self.power_is_on = False
                 case self.POWER_ON_ACK | self.POWER_ON_ERROR:
                     self.power_is_on = True

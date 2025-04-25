@@ -119,7 +119,6 @@ def get_display_listener(ui_record, display_driver):
     def listener(event):
         nonlocal ui_record, display_driver
         try:
-            print(data)
             data = str(event.arguments["data"].decode())
         except UnicodeDecodeError as err:
             context.log.error(f"{err=}")
@@ -219,9 +218,7 @@ def setup_rooms(event=None):
                     sd.toggle_vol_mute() if event.value else None
                 ),
                 "port/1/button/31": lambda event, sd=switcher_record.driver: (
-                    sd.select_source_three()
-                    if event.value
-                    else None
+                    sd.select_source_three() if event.value else None
                 ),
                 "port/1/button/32": lambda event, sd=switcher_record.driver: (
                     sd.select_source_four() if event.value else None
