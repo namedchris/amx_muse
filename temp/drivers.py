@@ -97,22 +97,23 @@ class LGDriver(BaseDriver):
         for line in lines:
             print(f"{line=}")
 
-            match line:
-                case self.POWER_OFF_ACK | self.POWER_OFF_ERROR:
-                    self.power_is_on = False
-                case self.POWER_ON_ACK | self.POWER_ON_ERROR | self.POWER_ON_QUERY_ACK:
-                    self.power_is_on = True
-                case self.PIC_MUTE_OFF_ACK | self.PIC_MUTE_OFF_QUERY_ACK:
-                    self.pic_mute_is_on = False
-                case self.PIC_MUTE_ON_ACK | self.PIC_MUTE_ON_QUERY_ACK:
-                    self.pic_mute_is_on = True
+            if line == self.POWER_OFF_ACK:
+                self.power_is_on = False
+            elif line == self.POWER_ON_ACK:
+                self.power_is_on = True
+            elif line == self.PIC_MUTE_OFF_ACK:
+                self.pic_mute_is_on = False
+            elif line == self.PIC_MUTE_ON_ACK:
+                self.pic_mute_is_on = True
 
     def toggle_power(self):
-        print("toggle power")
+        print(f"{self.power_is_on=}")
+        print("toggling power")
         if self.power_is_on:
             self.power_off()
         else:
             self.power_on()
+        print(f"{self.power_is_on=}")
 
     def power_off(self):
         print("executing power off")

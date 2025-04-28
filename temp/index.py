@@ -10,17 +10,17 @@ class DeviceRecord:
         self.device_id = device_id
         self.kind = device_id.split("-")[2]
         self.driver = None
-        match self.kind:
-            case "switcher":
-                self.driver = drivers.ExtronDriver(device_id, muse_device)
-            case "touchpad":
-                self.driver = drivers.TouchpadDriver(device_id, muse_device)
-            case "keypad":
-                self.driver = drivers.KeyPadDriver(device_id, muse_device)
-            case "monitor":
-                self.driver = drivers.LGDriver(device_id, muse_device)
-            case "projector":
-                self.driver = drivers.EpsonDriver(device_id, muse_device)
+        if self.kind == "switcher":
+            self.driver = drivers.ExtronDriver(device_id, muse_device)
+        elif self.kind == "touchpad":
+            self.driver = drivers.TouchpadDriver(device_id, muse_device)
+        elif self.kind == "keypad":
+            self.driver = drivers.KeyPadDriver(device_id, muse_device)
+        elif self.kind == "monitor":
+            self.driver = drivers.LGDriver(device_id, muse_device)
+        elif self.kind == "projector":
+            self.driver = drivers.EpsonDriver(device_id, muse_device)
+
         split_id = device_id.split("-")
         self.room = "-".join(split_id[:2])
         self.is_online = muse_device.isOnline()
