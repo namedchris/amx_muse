@@ -115,11 +115,16 @@ class LGDriver(BaseDriver):
             self.power_on()
 
     def power_off(self):
-        print("power off")
+        print("executing power off")
+        # assume power off will be successful
+        # will be verrified by subsequent recv event
+        self.power_is_on = False
         self.device.send(self.POWER_OFF_COMMAND)
 
     def power_on(self):
-        print("power on")
+        print("excuting power on")
+        # as above
+        self.power_is_on = True
         self.device.send(self.POWER_ON_COMMAND)
 
     def toggle_pic_mute(self):
