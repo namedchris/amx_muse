@@ -10,17 +10,17 @@ class DeviceRecord:
         self.device_id = device_id
         self.kind = device_id.split("-")[2]
         self.driver = None
-        match self.kind:
-            case "switcher":
-                self.driver = drivers.ExtronDriver(device_id, muse_device)
-            case "touchpad":
-                self.driver = drivers.TouchpadDriver(device_id, muse_device)
-            case "keypad":
-                self.driver = drivers.KeyPadDriver(device_id, muse_device)
-            case "monitor":
-                self.driver = drivers.LGDriver(device_id, muse_device)
-            case "projector":
-                self.driver = drivers.EpsonDriver(device_id, muse_device)
+        if self.kind == "switcher":
+            self.driver = drivers.ExtronDriver(device_id, muse_device)
+        elif self.kind == "touchpad":
+            self.driver = drivers.TouchpadDriver(device_id, muse_device)
+        elif self.kind == "keypad":
+            self.driver = drivers.KeyPadDriver(device_id, muse_device)
+        elif self.kind == "monitor":
+            self.driver = drivers.LGDriver(device_id, muse_device)
+        elif self.kind == "projector":
+            self.driver = drivers.EpsonDriver(device_id, muse_device)
+
         split_id = device_id.split("-")
         self.room = "-".join(split_id[:2])
         self.is_online = muse_device.isOnline()
@@ -47,9 +47,7 @@ class DeviceRegistry:
 
         muse_device_ids = set(muse_device_ids)
         # get ids for current records
-        current_device_ids = set(
-            device_record.device_id for device_record in self.device_records
-        )
+        current_device_ids = set(device_record.device_id for device_record in self.device_records)
         # get a list of only new device ids so we don't override existing records
         new_device_ids = muse_device_ids - current_device_ids
         # build a set of new records for the new devices
@@ -62,18 +60,10 @@ class DeviceRegistry:
         self.device_records = self.device_records | new_device_records
 
     def get_display_records(self):
-        return [
-            record
-            for record in self.device_records
-            if record.kind in ("monitor", "projector")
-        ]
+        return [record for record in self.device_records if record.kind in ("monitor", "projector")]
 
     def get_ui_records(self):
-        return [
-            record
-            for record in self.device_records
-            if record.kind in ("keypad", "touchpad")
-        ]
+        return [record for record in self.device_records if record.kind in ("keypad", "touchpad")]
 
     def get_switcher_records(self):
         return [record for record in self.device_records if record.kind == "switcher"]
@@ -86,32 +76,20 @@ class DeviceRegistry:
     # Return the next record of that type for the given room
     def get_display_record_by_room(self, room):
         return next(
-            iter(
-                r
-                for r in self.device_records
-                if (r.room == room) and r.kind in ("monitor", "projector")
-            ),
+            iter(r for r in self.device_records if (r.room == room) and r.kind in ("monitor", "projector")),
             None,
         )
 
     def get_ui_record_by_room(self, room):
         room_record = next(
-            iter(
-                r
-                for r in self.device_records
-                if (r.room == room) and r.kind in ("keypad", "touchpad")
-            ),
+            iter(r for r in self.device_records if (r.room == room) and r.kind in ("keypad", "touchpad")),
             None,
         )
         return room_record
 
     def get_switcher_record_by_room(self, room):
         return next(
-            iter(
-                r
-                for r in self.device_records
-                if (r.room == room) and (r.kind == "switcher")
-            ),
+            iter(r for r in self.device_records if (r.room == room) and (r.kind == "switcher")),
             None,
         )
 
@@ -162,21 +140,11 @@ def get_switcher_listener(ui_record, switcher_driver):
         print(f"Event on switcher: {data}")
         switcher_driver.update_state(data)
         if "touchpad" in ui_record.device_id:
-            ui_record.driver.device.port[1].channel[
-                31
-            ] = switcher_driver.input_three_is_active
-            ui_record.driver.device.port[1].channel[
-                32
-            ] = switcher_driver.input_four_is_active
-            ui_record.driver.device.port[1].channel[
-                33
-            ] = switcher_driver.input_six_is_active
-            ui_record.driver.device.port[1].channel[
-                26
-            ] = switcher_driver.volume_is_muted
-            ui_record.driver.device.port[1].level[1] = (
-                switcher_driver.get_normalized_volume() * 255
-            )
+            ui_record.driver.device.port[1].channel[31] = switcher_driver.input_three_is_active
+            ui_record.driver.device.port[1].channel[32] = switcher_driver.input_four_is_active
+            ui_record.driver.device.port[1].channel[33] = switcher_driver.input_six_is_active
+            ui_record.driver.device.port[1].channel[26] = switcher_driver.volume_is_muted
+            ui_record.driver.device.port[1].level[1] = switcher_driver.get_normalized_volume() * 255
         elif "keypad" in ui_record.device_id:
             # TODO implement keypad support
             pass
@@ -194,9 +162,7 @@ def prune_devices(devices, prunings):
 # populate the lists and dictionaries; create and register watchers and listeners
 def setup_rooms(event=None):
     # remove built in devices
-    device_ids = prune_devices(
-        list(context.devices.ids()), ("franky", "led", "idevice")
-    )
+    device_ids = prune_devices(list(context.devices.ids()), ("franky", "led", "idevice"))
     global device_registry
     device_registry.update(device_ids)
     for room in device_registry.get_rooms():
@@ -210,21 +176,15 @@ def setup_rooms(event=None):
             buttons = {
                 # muse watchers must accept an event argument. event.value tells you if the you are handling a press or release
                 # executes function on push, executes noop on release
-                "port/1/button/9": lambda event, dd=display_record.driver: (
-                    dd.toggle_power() if event.value else None
-                ),
+                "port/1/button/9": lambda event, dd=display_record.driver: (dd.toggle_power() if event.value else None),
                 "port/1/button/210": lambda event, dd=display_record.driver: (
                     dd.toggle_pic_mute() if event.value else None
                 ),
                 "port/1/button/24": lambda event, sd=switcher_record.driver: (
-                    sd.start_volume_ramp_up()
-                    if event.value
-                    else sd.stop_volume_ramp_up()
+                    sd.start_volume_ramp_up() if event.value else sd.stop_volume_ramp_up()
                 ),
                 "port/1/button/25": lambda event, sd=switcher_record.driver: (
-                    sd.start_volume_ramp_down()
-                    if event.value
-                    else sd.stop_volume_ramp_down()
+                    sd.start_volume_ramp_down() if event.value else sd.stop_volume_ramp_down()
                 ),
                 "port/1/button/26": lambda event, sd=switcher_record.driver: (
                     sd.toggle_vol_mute() if event.value else None
@@ -252,24 +212,18 @@ def setup_rooms(event=None):
         # register feedback listeners with muse devices
         if not display_record.has_listeners:
             print(f"adding display listener for {room}")
-            display_record.driver.device.receive.listen(
-                get_display_listener(ui_record, display_record.driver)
-            )
+            display_record.driver.device.receive.listen(get_display_listener(ui_record, display_record.driver))
             display_record.has_listeners = True
         else:
             print(f"{display_record.device_id} already has listeners!")
         if not switcher_record.has_listeners:
             print(f"adding switcher listener for {room}")
-            switcher_record.driver.device.receive.listen(
-                get_switcher_listener(ui_record, switcher_record.driver)
-            )
+            switcher_record.driver.device.receive.listen(get_switcher_listener(ui_record, switcher_record.driver))
             switcher_record.has_listeners = True
         display_record.driver.run_online_tasks()  #!Run online tasks after listeners are set
 
 
-muse_device_ids = prune_devices(
-    list(context.devices.ids()), ("franky", "led", "idevice")
-)
+muse_device_ids = prune_devices(list(context.devices.ids()), ("franky", "led", "idevice"))
 device_registry = DeviceRegistry()
 device_registry.update(muse_device_ids)
 
