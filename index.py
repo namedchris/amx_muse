@@ -1,9 +1,9 @@
 # index.py
 from mojo import context
-import drivers, restart_program
+import drivers, reboot_controller
 
-# Schedule a daily restart at 3:00 AM
-restart_program.schedule_daily_restart(3)
+# Schedule a daily reboot for the controller at 3:00 AM
+reboot_controller.schedule_daily_reboot(3)
 
 # global device registry
 device_registry = None

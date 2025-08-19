@@ -1,9 +1,15 @@
-import os, sys, time, threading
+import os, sys, time, threading, subprocess
 from datetime import datetime, timedelta
+
+CONTROLLER_IP = "192.168.0.5"
+USERNAME = "admin"
+PASSWORD = "password"
+PORT = "22"
 
 
 # Find the seconds until a given hour and minute of the day
 def _seconds_until(reboot_hour, reboot_minute=0):
+    return 3
     now = datetime.now()
     reboot_time = now.replace(hour=reboot_hour, minute=reboot_minute, second=0, microsecond=0)
     if reboot_time <= now:
@@ -12,7 +18,7 @@ def _seconds_until(reboot_hour, reboot_minute=0):
 
 
 # Start a background thread that restarts this script daily at reboot_hour:reboot_minute
-def schedule_daily_restart(reboot_hour, reboot_minute=0):
+def schedule_daily_reboot(reboot_hour, reboot_minute=0):
     def loop():
         while True:
             delay = _seconds_until(reboot_hour, reboot_minute)
@@ -21,19 +27,25 @@ def schedule_daily_restart(reboot_hour, reboot_minute=0):
                 f"[{datetime.now()}] Restarting program (scheduled {reboot_hour:02d}:{reboot_minute:02d})...",
                 flush=True,
             )
-            # Replace the current process with a fresh instance
-            os.execv(sys.executable, [sys.executable] + sys.argv)
+            _reboot()
 
     threading.Thread(target=loop, daemon=True).start()
 
 
-def restart_now():
-    print(
-        f"[{datetime.now()}] Restarting program now...",
-        flush=True,
-    )
-    # Replace the current process with a fresh instance
-    os.execv(sys.executable, [sys.executable] + sys.argv)
-
-def reboot_controller():
-    context.run()
+def _reboot(event=None):
+    try:
+        cmd = [
+            "ssh",
+            "-p",
+            PORT,
+            "-o",
+            "StrictHostKeyChecking=no",  # auto-accept host key
+            f"{USERNAME}@{CONTROLLER_IP}",
+            "platform:reboot",
+        ]
+        print("[SSH] running:", " ".join(cmd))
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+        print("[SSH] stdout:", result.stdout.strip())
+        print("[SSH] stderr:", result.stderr.strip())
+    except Exception as e:
+        print(f"[SSH] failed: {e!r}")
