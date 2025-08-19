@@ -1,3 +1,4 @@
+# index.py
 from mojo import context
 import drivers
 
@@ -222,6 +223,10 @@ def setup_rooms(event=None):
             switcher_record.has_listeners = True
         display_record.driver.run_online_tasks()  #!Run online tasks after listeners are set
 
+
+import restart_program
+
+restart_program.schedule_daily_restart(3, 0)
 
 muse_device_ids = prune_devices(list(context.devices.ids()), ("franky", "led", "idevice"))
 device_registry = DeviceRegistry()

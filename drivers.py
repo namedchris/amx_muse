@@ -1,3 +1,4 @@
+# drivers.py
 import threading
 import time
 
@@ -60,12 +61,8 @@ class LGDriver(BaseDriver):
     PIC_MUTE_OFF_ACK = "d 01 OK00x"
 
     # errors
-    POWER_ON_ERROR = (
-        "a 01 NG01x"  # returned when powered on monitor is asked to power on
-    )
-    POWER_OFF_ERROR = (
-        "a 01 NG00x"  # returned when powered on monitor is asked to power off
-    )
+    POWER_ON_ERROR = "a 01 NG01x"  # returned when powered on monitor is asked to power on
+    POWER_OFF_ERROR = "a 01 NG00x"  # returned when powered on monitor is asked to power off
 
     def __init__(self, device_id, device):
         self.device_id = device_id
@@ -221,18 +218,14 @@ class ExtronDriver(BaseDriver):
 
     def ramp_volume_up(self):
         while self.is_ramping_up.is_set():
-            target_volume_level = min(
-                self.volume_level + self.VOLUME_DELTA, self.MAX_VOLUME
-            )
+            target_volume_level = min(self.volume_level + self.VOLUME_DELTA, self.MAX_VOLUME)
             self.device.send(f"\x1bD1*{target_volume_level}GRPM\r\n")
             print("vol up")
             time.sleep(self.SLEEP_TIME)
 
     def ramp_volume_down(self):
         while self.is_ramping_down.is_set():
-            target_volume_level = max(
-                self.volume_level - self.VOLUME_DELTA, self.MIN_VOLUME
-            )
+            target_volume_level = max(self.volume_level - self.VOLUME_DELTA, self.MIN_VOLUME)
             self.device.send(f"\x1bD1*{target_volume_level}GRPM\r\n")
             time.sleep(self.SLEEP_TIME)
             print("vol down")
