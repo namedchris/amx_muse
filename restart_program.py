@@ -1,27 +1,36 @@
-# restart_program.py
 import os, sys, time, threading
 from datetime import datetime, timedelta
 
 
-# How many seconds until the next target time (h:m)
+# Find the seconds until a given hour and minute of the day
 def _seconds_until(reboot_hour, reboot_minute=0):
     now = datetime.now()
-    target = now.replace(hour=reboot_hour, minute=reboot_minute, second=0, microsecond=0)
-    if target <= now:  # if today’s time has passed, schedule for tomorrow
-        target += timedelta(days=1)
-    return int((target - now).total_seconds())
+    reboot_time = now.replace(hour=reboot_hour, minute=reboot_minute, second=0, microsecond=0)
+    if reboot_time <= now:
+        reboot_time += timedelta(days=1)
+    return int((reboot_time - now).total_seconds())
 
 
-# Start a background thread that restarts this script daily at h:m
+# Start a background thread that restarts this script daily at reboot_hour:reboot_minute
 def schedule_daily_restart(reboot_hour, reboot_minute=0):
     def loop():
         while True:
-            time.sleep(_seconds_until(reboot_hour, reboot_minute))  # wait until the right time
+            delay = _seconds_until(reboot_hour, reboot_minute)
+            time.sleep(delay)
+            print(
+                f"[{datetime.now()}] Restarting program (scheduled {reboot_hour:02d}:{reboot_minute:02d})...",
+                flush=True,
+            )
+            # Replace the current process with a fresh instance
             os.execv(sys.executable, [sys.executable] + sys.argv)
-            # replaces the current process with a fresh one
 
     threading.Thread(target=loop, daemon=True).start()
 
 
 def restart_now():
+    print(
+        f"[{datetime.now()}] Restarting program now...",
+        flush=True,
+    )
+    # Replace the current process with a fresh instance
     os.execv(sys.executable, [sys.executable] + sys.argv)
