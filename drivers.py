@@ -1,9 +1,18 @@
-import mojo
+# drivers.py
 import threading
 import time
 
 
-class EpsonDriver:
+class BaseDriver:
+
+    def run_online_tasks(self):
+        raise NotImplementedError
+
+    def query_state(self):
+        raise NotImplementedError
+
+
+class EpsonDriver(BaseDriver):
 
     POWER_ON_COMMAND = "PWR ON\r\n"
     POWER_OFF_COMMAND = "POW OFF\r\n"
@@ -13,67 +22,93 @@ class EpsonDriver:
     MUTE_OFF_COMMAND = "MUTE OFF\r\n"
     MUTE_QUERY = "MUTE?\r\n"
 
+    def run_online_tasks(self):
+        self.query_state()
+
+    def query_state(self):
+        pass
+
     def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device
         self.power_is_on = False
         self.pic_mute_is_on = False
-        self.recv_buffer = ''
+        self.recv_buffer = ""
 
 
-
-class LGDriver:
+class LGDriver(BaseDriver):
 
     # commands
-    POWER_OFF_COMMAND = "ka 00 00\x0D"
-    POWER_ON_COMMAND = "ka 00 01\x0D"
-    PIC_MUTE_OFF_COMMAND = "kd 0 00\x0D"
-    PIC_MUTE_ON_COMMAND = "kd 1 01\x0D"
+    POWER_OFF_COMMAND = "ka 00 00\x0d"
+    POWER_ON_COMMAND = "ka 00 01\x0d"
+    PIC_MUTE_OFF_COMMAND = "kd 0 00\x0d"
+    PIC_MUTE_ON_COMMAND = "kd 1 01\x0d"
+
+    # queries
+    POWER_QUERY = "ka 0 FF\x0d"
+    PIC_MUTE_QUERY = "kc 0 FF\x0d"
+
+    # query acknowledgements
+    POWER_ON_QUERY_ACK = "a 01 OK01x"
+    PIC_MUTE_OFF_QUERY_ACK = "c 01 OK00x"
+    PIC_MUTE_ON_QUERY_ACK = "c 01 OK01x"
+    # PIC_MUTE_QUERY_ERROR = "c 01 NGffx" #Note: this may not be needed
+
     # acknowledgements
     POWER_ON_ACK = "a 01 OK01x"
     POWER_OFF_ACK = "a 01 OK00x"
     PIC_MUTE_ON_ACK = "d 01 OK01x"
     PIC_MUTE_OFF_ACK = "d 01 OK00x"
+
     # errors
-    POWER_ON_ERROR = "a 01 NG01x" #returned when powered on monitor is asked to power on
-    POWER_OFF_ERROR = "a 01 NG00x" #returned when powered on monitor is asked to power off
+    POWER_ON_ERROR = "a 01 NG01x"  # returned when powered on monitor is asked to power on
+    POWER_OFF_ERROR = "a 01 NG00x"  # returned when powered on monitor is asked to power off
 
     def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device
         self.power_is_on = False
         self.pic_mute_is_on = False
-        self.recv_buffer = ''
-        
+
+        self.recv_buffer = ""
+
+    def run_online_tasks(self):
+        self.query_state()
+
+    def query_state(self):
+        print(f"Sending power query for {self.device_id}")
+        self.device.send(self.POWER_QUERY)
+        print(f"Sending pic mute query {self.device_id}")
+        self.device.send(self.PIC_MUTE_QUERY)
 
     def update_state(self):
+        print(f"processing buffer for {self.device_id}:\n   {self.recv_buffer=}")
         lines = []
         # consume buffer, appending lines to lines, leaving unterminated lines in the buffer
-        while 'x' in self.recv_buffer:
-            items = self.recv_buffer.partition('x')
-            line = items[0]+items[1]
+        while "x" in self.recv_buffer:
+            items = self.recv_buffer.partition("x")
+            line = items[0] + items[1]
             self.recv_buffer = items[2]
             print(f"{line=}\n{self.recv_buffer=}")
             lines.append(line)
         for line in lines:
             print(f"{line=}")
 
-            match line:
-                case self.POWER_OFF_ACK:
-                    self.power_is_on = False
-                case self.POWER_ON_ACK | self.POWER_ON_ERROR:
-                    self.power_is_on = True
-                case self.PIC_MUTE_OFF_ACK:
-                    self.pic_mute_is_on = False
-                case self.PIC_MUTE_ON_ACK:
-                    self.pic_mute_is_on = True
+            if line == self.POWER_OFF_ACK:
+                self.power_is_on = False
+            elif line == self.POWER_ON_ACK:
+                self.power_is_on = True
+            elif line == self.PIC_MUTE_OFF_ACK:
+                self.pic_mute_is_on = False
+            elif line == self.PIC_MUTE_ON_ACK:
+                self.pic_mute_is_on = True
 
     def toggle_power(self):
         print("toggle power")
         if self.power_is_on:
-            self.device.send(self.POWER_OFF_COMMAND)
+            self.power_off()
         else:
-            self.device.send(self.POWER_ON_COMMAND)
+            self.power_on()
 
     def power_off(self):
         print("power off")
@@ -91,12 +126,16 @@ class LGDriver:
             self.device.send(self.PIC_MUTE_ON_COMMAND)
 
 
-class ExtronDriver:
+class ExtronDriver(BaseDriver):
     SOURCE_THREE_COMMAND = "3!\r"
     SOURCE_FOUR_COMMAND = "4!\r"
     SOURCE_SIX_COMMAND = "6!\r"
-    VOL_MUTE_OFF_COMMAND = '\x1BD2*0GRPM\r\n'
-    VOL_MUTE_ON_COMMAND = '\x1BD2*1GRPM\r\n'
+    VOL_MUTE_OFF_COMMAND = "\x1bD2*0GRPM\r\n"
+    VOL_MUTE_ON_COMMAND = "\x1bD2*1GRPM\r\n"
+
+    QUERY_INPUT = "!"
+    QUERY_VOL_MUTE = "\x1bD2GRPM"
+    QUERY_VOL_LEVEL = "\x1d1GRPM"
 
     VOLUME_DELTA = 10
     MIN_VOLUME = -500
@@ -118,63 +157,76 @@ class ExtronDriver:
         self.input_six_is_active = False
         self.volume_level = -400
         self.volume_is_muted = False
-    
-    #returns volume as a percentage of the MIN_VOLUME - MAX_VOLUME  range
-    #The math here will evaluate to the correct volume percentage even with different MIN_VOLUME and MAX_VOLUME values
+
+    def run_online_tasks(self):
+        print(f"Running online tasks for {self.device_id}")
+        self.query_state()
+
+    def query_state(self):
+        self.device.send(self.QUERY_VOL_MUTE)
+        self.device.send(self.QUERY_VOL_LEVEL)
+        self.device.send(self.QUERY_INPUT)
+
+    # returns volume as a percentage of the MIN_VOLUME - MAX_VOLUME  range
+    # The math here will evaluate to the correct volume percentage even with different MIN_VOLUME and MAX_VOLUME values
     def get_normalized_volume(self):
         range = self.MAX_VOLUME - self.MIN_VOLUME
-        offset = 0-self.MIN_VOLUME
-        normalized_volume = (self.volume_level + offset)/range
-        return normalized_volume    
+        offset = 0 - self.MIN_VOLUME
+        normalized_volume = (self.volume_level + offset) / range
+        return normalized_volume
 
     def update_state(self, feedback):
-        print(f"{feedback=}")#!
         lines = feedback.split("\r\n")
-        print(f"{lines=}")#!
         for line in lines:
+
             if line.startswith("In03 All"):
-                    self.input_three_is_active, self.input_four_is_active, self.input_six_is_active = (
-                        True,
-                        False,
-                        False,
-                    )
+                (
+                    self.input_three_is_active,
+                    self.input_four_is_active,
+                    self.input_six_is_active,
+                ) = (
+                    True,
+                    False,
+                    False,
+                )
             elif line.startswith("In04 All"):
-                    self.input_three_is_active, self.input_four_is_active, self.input_six_is_active = (
-                        False,
-                        True,
-                        False,
-                    )
+                (
+                    self.input_three_is_active,
+                    self.input_four_is_active,
+                    self.input_six_is_active,
+                ) = (
+                    False,
+                    True,
+                    False,
+                )
             elif line.startswith("In06 All"):
-                    self.input_three_is_active, self.input_four_is_active, self.input_six_is_active = (
-                        False,
-                        False,
-                        True,
-                    )
+                (
+                    self.input_three_is_active,
+                    self.input_four_is_active,
+                    self.input_six_is_active,
+                ) = (
+                    False,
+                    False,
+                    True,
+                )
             if "GrpmD2" in line:
-                print("Inside GrpmD2")#!
-                self.volume_is_muted = False if (line.split("*")[1][0]) == '0' else True
+                self.volume_is_muted = False if (line.split("*")[1][0]) == "0" else True
                 print(f"GRPMD2 {self.volume_is_muted=}")
             elif "GrpmD1" in line:
-                print("Inside GrpmD1")#!
                 self.volume_level = int(line.split("*")[1].strip())
                 print(f"{self.volume_level=}")
-           
 
     def ramp_volume_up(self):
         while self.is_ramping_up.is_set():
-            target_volume_level = min(
-                self.volume_level + self.VOLUME_DELTA, self.MAX_VOLUME
-            )
-            self.device.send(f"\x1BD1*{target_volume_level}GRPM\r\n")
+            target_volume_level = min(self.volume_level + self.VOLUME_DELTA, self.MAX_VOLUME)
+            self.device.send(f"\x1bD1*{target_volume_level}GRPM\r\n")
             print("vol up")
             time.sleep(self.SLEEP_TIME)
 
     def ramp_volume_down(self):
         while self.is_ramping_down.is_set():
-            target_volume_level = max(
-                self.volume_level - self.VOLUME_DELTA, self.MIN_VOLUME
-            )
-            self.device.send(f"\x1BD1*{target_volume_level}GRPM\r\n")
+            target_volume_level = max(self.volume_level - self.VOLUME_DELTA, self.MIN_VOLUME)
+            self.device.send(f"\x1bD1*{target_volume_level}GRPM\r\n")
             time.sleep(self.SLEEP_TIME)
             print("vol down")
 
@@ -197,7 +249,7 @@ class ExtronDriver:
     def toggle_vol_mute(self):
         print("toggle vol mute")
         # TODO send toggle vol mute command
-        print(f"{self.volume_is_muted=}")
+        print(f"{self.volume_is_muted=}")  #!
         if self.volume_is_muted:
             print("sending mute off")
             self.device.send(self.VOL_MUTE_OFF_COMMAND)
@@ -218,20 +270,33 @@ class ExtronDriver:
         print("select_source_six")
         self.device.send(self.SOURCE_SIX_COMMAND)
 
-class TouchpadDriver:
+
+class TouchpadDriver(BaseDriver):
 
     def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device
         self.set_label()
 
-    def set_label(self):
-        room,number,type,index = self.device_id.split("-")
-        self.device.port[1].send_command(f"^TXT-201,0,{room.upper()}-{number}")   
+    def run_online_tasks(self):
+        self.query_state()
 
-    
-class KeyPadDriver:
+    def query_state(self):
+        pass
+
+    def set_label(self):
+        room, number, type, index = self.device_id.split("-")
+        self.device.port[1].send_command(f"^TXT-201,0,{room.upper()}-{number}")
+
+
+class KeyPadDriver(BaseDriver):
 
     def __init__(self, device_id, device):
         self.device_id = device_id
         self.device = device
+
+    def run_online_tasks(self):
+        self.query_state()
+
+    def query_state(self):
+        pass
