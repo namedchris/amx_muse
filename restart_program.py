@@ -34,6 +34,3 @@ def restart_now():
     )
     # Replace the current process with a fresh instance
     os.execv(sys.executable, [sys.executable] + sys.argv)
-
-def reboot_controller():
-    context.run()
